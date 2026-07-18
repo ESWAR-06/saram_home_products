@@ -1625,6 +1625,15 @@ img {
     flex: 0 0 auto;
     margin-left: auto;     /* push hamburger to the far right */
   }
+
+  /* Keep logo compact on mobile so brand text stays centred */
+  .nav-logo {
+    height: 40px;
+  }
+
+  .main-header.scrolled .nav-logo {
+    height: 36px;
+  }
   
   /* Hero Section Mobile */
   .hero-container {
