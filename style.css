@@ -295,7 +295,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 1;
+  /* No flex:1 here — desktop uses space-between on header-container */
 }
 
 .nav-logo {
@@ -1597,33 +1597,33 @@ img {
     display: flex;
     flex-shrink: 0;
   }
-  
+
   .desktop-nav, .btn-nav-cta {
     display: none;
   }
 
-  /* Centre brand name on mobile between logo and hamburger */
+  /* Centre brand name between logo (left) and hamburger (right) */
   .header-container {
-    position: relative;
+    position: relative;    /* positioning context for the absolute brand */
   }
 
   .logo-area {
-    flex: 0 0 auto; /* Don't grow — just be the logo */
-    gap: 10px;
+    flex: 0 0 auto;        /* shrink to logo size only — don't grow */
   }
 
   .brand-name {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    font-size: clamp(0.75rem, 3.8vw, 1rem);
     text-align: center;
-    pointer-events: none; /* clicks pass through to the link beneath */
+    white-space: nowrap;
+    pointer-events: none;  /* taps pass through to the <a> underneath */
   }
 
   .nav-right {
     flex: 0 0 auto;
-    margin-left: auto;
+    margin-left: auto;     /* push hamburger to the far right */
   }
   
   /* Hero Section Mobile */
