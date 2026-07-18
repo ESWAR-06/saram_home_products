@@ -295,6 +295,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex: 1;
 }
 
 .nav-logo {
@@ -311,7 +312,7 @@ img {
 .brand-name {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: clamp(0.95rem, 3vw, 1.4rem);
+  font-size: clamp(0.85rem, 2.8vw, 1.4rem);
   letter-spacing: 0.05em;
   color: var(--color-primary);
   white-space: nowrap;
@@ -1594,10 +1595,35 @@ img {
   /* Mobile Nav Header */
   .mobile-menu-toggle {
     display: flex;
+    flex-shrink: 0;
   }
   
   .desktop-nav, .btn-nav-cta {
     display: none;
+  }
+
+  /* Centre brand name on mobile between logo and hamburger */
+  .header-container {
+    position: relative;
+  }
+
+  .logo-area {
+    flex: 0 0 auto; /* Don't grow — just be the logo */
+    gap: 10px;
+  }
+
+  .brand-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    text-align: center;
+    pointer-events: none; /* clicks pass through to the link beneath */
+  }
+
+  .nav-right {
+    flex: 0 0 auto;
+    margin-left: auto;
   }
   
   /* Hero Section Mobile */

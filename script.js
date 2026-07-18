@@ -32,7 +32,8 @@ const productDescriptions = {
   'Comb': 'Neem wood wide-tooth hair comb, stimulates scalp health and prevents static damage.',
   'Koodai': 'Premium traditional hand-woven carry basket with sturdy handles, durable and eco-friendly.',
   'Muram': 'Traditional handmade winnowing tray, made from strong bamboo splits for kitchen utility.',
-  'Thing': 'Artisanal handcrafted utility container, bringing natural vintage aesthetics to your home.',
+  'Thing': 'Artisanal handcrafted coaster, bringing natural vintage aesthetics to your home.',
+  'Handcrafted Coaster': 'Artisanal handcrafted coaster, bringing natural vintage aesthetics to your home.',
   'Toothbrush': 'Biodegradable bamboo toothbrush with soft charcoal-infused bristles for gentle oral care.'
 };
 
@@ -125,6 +126,11 @@ const detailedProducts = {
 };
 
 // 2. Helper Functions for parsing names and prices
+// Display name overrides: map parsed filename stem → friendly product name
+const displayNameOverrides = {
+  'Thing': 'Handcrafted Coaster'
+};
+
 function parseProductName(filename) {
   // Remove extension
   let name = filename.substring(0, filename.lastIndexOf('.'));
@@ -135,9 +141,11 @@ function parseProductName(filename) {
   // Convert underscores to spaces
   name = name.replace(/_/g, ' ');
   // Capitalize words
-  return name.split(' ')
+  const parsed = name.split(' ')
              .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
              .join(' ');
+  // Apply friendly-name override if present
+  return displayNameOverrides[parsed] || parsed;
 }
 
 // Ensure exact name mapping for detailed products
