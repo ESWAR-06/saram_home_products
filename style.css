@@ -309,13 +309,16 @@ img {
   height: 56px;
 }
 
-.brand-name {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: clamp(0.85rem, 2.8vw, 1.4rem);
-  letter-spacing: 0.05em;
-  color: var(--color-primary);
-  white-space: nowrap;
+.brand-name{
+    position:static;
+    transform:none;
+    flex:1;
+    margin:0 8px;
+    font-size:1.2rem;
+    font-weight: bolder;
+    white-space:nowrap;
+    text-align:center;
+    overflow:visible;
 }
 
 /* Desktop Nav Links */
@@ -1607,29 +1610,49 @@ img {
     position: relative;    /* positioning context for the absolute brand */
   }
 
-  .logo-area {
-    flex: 0 0 auto;        /* shrink to logo size only — don't grow */
-  }
+ .logo-area{
+    display:flex;
+    align-items:center;
+    flex:1;
+    min-width:0;
+}
 
-  .brand-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(0.75rem, 3.8vw, 1rem);
-    text-align: center;
-    white-space: nowrap;
-    pointer-events: none;  /* taps pass through to the <a> underneath */
-  }
+.brand-name{
+    position: static;
+    transform: none;
 
-  .nav-right {
-    flex: 0 0 auto;
-    margin-left: auto;     /* push hamburger to the far right */
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 8px;
+
+    font-family: var(--font-heading);
+    font-weight: 700;
+
+    font-size: 0.78rem;
+    line-height: 1.1;
+
+    color: var(--color-primary);
+
+    white-space: normal;
+}
+
+.brand-name span{
+    display: block;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+}
 
   /* Keep logo compact on mobile so brand text stays centred */
-  .nav-logo {
-    height: 40px;
-  }
+.nav-logo{
+    height:32px;
+}
 
   .main-header.scrolled .nav-logo {
     height: 36px;
@@ -1770,8 +1793,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+      width:38px;
+    height:38px;
   border-radius: var(--radius-full);
   background-color: rgba(20, 50, 36, 0.05);
   color: var(--color-primary);
@@ -1785,9 +1808,9 @@ img {
   transform: translateY(-2px);
 }
 
-.icon-cart {
-  width: 22px;
-  height: 22px;
+.icon-cart{
+    width:18px;
+    height:18px;
 }
 
 .cart-badge {
@@ -1888,19 +1911,27 @@ img {
   box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 440px) {
-  .product-card-actions {
-    flex-direction: column;
-    gap: 8px;
-  }
+@media (max-width:440px){
 
-  .product-card-actions .btn-add-cart,
-  .product-card-actions .btn-card-details {
-    width: 100%;
-    height: 38px;
-  }
+.product-card-actions{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    width:100%;
+    margin-top:16px;
 }
 
+.product-card-actions .btn-add-cart,
+.product-card-actions .btn-card-details{
+    flex:1;
+    width:auto;
+    height:40px;
+    padding:0 12px;
+    font-size:0.78rem;
+    border-radius:10px;
+}
+
+}
 /* Cart Page Layout */
 .cart-section,
 .checkout-section {
