@@ -5153,7 +5153,7 @@ h1, h2 {
 }
 
 /* ==========================================================================
-   RESPONSIVE — PREMIUM ADJUSTMENTS
+   RESPONSIVE — COMPREHENSIVE MOBILE ALIGNMENT & LAYOUT FIXES
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -5165,20 +5165,249 @@ h1, h2 {
     -webkit-backdrop-filter: blur(8px);
   }
 
-  /* Simpler hero background on mobile */
+  /* General Section Padding & Container */
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Top Offer Banner on Mobile */
+  .top-offer-banner {
+    padding: 6px 12px;
+  }
+
+  .offer-banner-container {
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .offer-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .offer-sub-text {
+    display: none;
+  }
+
+  .offer-pill {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+
+  .offer-main-text {
+    font-size: 0.78rem;
+  }
+
+  .offer-btn {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  /* Header & Navigation on Mobile */
+  .main-header {
+    height: 72px;
+  }
+
+  .main-header.scrolled {
+    height: 64px;
+  }
+
+  .header-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .logo-area {
+    gap: 8px;
+    flex: 0 1 auto;
+    max-width: calc(100% - 110px);
+  }
+
+  .nav-logo {
+    height: 46px;
+    width: auto;
+  }
+
+  .main-header.scrolled .nav-logo {
+    height: 40px;
+  }
+
+  .brand-name {
+    flex: 0 1 auto;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .brand-name span {
+    display: block;
+  }
+
+  .nav-right {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .btn-nav-cta {
+    display: none;
+  }
+
+  .nav-cart-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Hero Section on Mobile */
   .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 24px);
+    padding-bottom: 70px;
     background:
       radial-gradient(ellipse at 70% 10%, rgba(39, 115, 74, 0.08) 0%, transparent 50%),
       linear-gradient(160deg, #F8FAF7 0%, #F3F7F2 100%);
   }
 
-  .footer-leaf-particle {
-    display: none;
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 36px;
   }
 
-  /* Hero title smaller display font size on small screens */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-badges-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem;
+    padding: 6px 14px;
+    letter-spacing: 0.04em;
+    white-space: normal;
+    text-align: center;
+    max-width: 95%;
+    line-height: 1.35;
+  }
+
+  .hero-offer-tag {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
   .hero-title {
-    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    font-size: clamp(2rem, 7.5vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 24px;
+    text-align: center;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 24px;
+    font-size: 0.92rem;
+  }
+
+  /* Hero Visual Collage on Mobile */
+  .hero-visual {
+    height: 320px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .collage-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .collage-bg-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .collage-img {
+    width: 140px;
+    height: 140px;
+    border-width: 3px;
+  }
+
+  .collage-img-main {
+    top: 15%;
+    left: 4%;
+  }
+
+  .collage-img-sub1 {
+    top: 8%;
+    left: 46%;
+  }
+
+  .collage-img-sub2 {
+    top: 42%;
+    left: 28%;
+  }
+
+  .footer-leaf-particle {
+    display: none;
   }
 }
 
@@ -5190,6 +5419,29 @@ h1, h2 {
   .main-header {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+  }
+
+  .brand-name {
+    font-size: 0.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .hero-visual {
+    height: 280px;
+    max-width: 300px;
+  }
+
+  .collage-bg-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .collage-img {
+    width: 120px;
+    height: 120px;
   }
 }
 
