@@ -1,12 +1,23 @@
 /**
  * SARAM HOME PRODUCTS - PRODUCT CATALOG
- * All products with unique IDs, correct prices, categories, and detail keys.
+ * Clean, unique product catalog with no duplicate entries.
  */
 
 const DEFAULT_PRODUCT_PRICE = 50;
 
 const PRODUCT_CATALOG = [
   // ── Eco Cleaning ──────────────────────────────────────────────────────────
+  {
+    id: 'prod-citrus-bio-enzyme',
+    filename: 'bio_enzyme_floor_cleaner.jpeg',
+    title: 'Citrus Bio Enzyme',
+    subtitle: '500 ml',
+    category: 'cleaning',
+    categoryLabel: 'Eco Cleaning',
+    price: 80,
+    shortDesc: 'Naturally fermented multi-purpose cleaner & plant booster made from citrus peels, jaggery, and water.',
+    detailedKey: 'Citrus Bio Enzyme'
+  },
   {
     id: 'prod-handwash',
     filename: 'bio_enzyme_handwash.jpeg',
@@ -124,19 +135,19 @@ const PRODUCT_CATALOG = [
   {
     id: 'prod-basket-small',
     filename: 'basket2_rs15.jpeg',
-    title: 'Palm Basket',
-    subtitle: 'Small',
+    title: 'Palm Basket (Small)',
+    subtitle: 'Handwoven Palm',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
     price: 15,
-    shortDesc: 'Sleek traditional hand-woven basket, ideal for fruit storage or natural home decor.',
+    shortDesc: 'Sleek traditional hand-woven palm basket, ideal for fruit storage or natural home decor.',
     detailedKey: null
   },
   {
     id: 'prod-basket-medium',
     filename: 'basket3_rs30.jpeg',
-    title: 'Palm Basket',
-    subtitle: 'Medium',
+    title: 'Palm Basket (Medium)',
+    subtitle: 'Handwoven Palm',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
     price: 30,
@@ -146,7 +157,7 @@ const PRODUCT_CATALOG = [
   {
     id: 'prod-basket-storage',
     filename: 'basket_rs20.jpeg',
-    title: 'Storage Basket',
+    title: 'Storage Palm Basket',
     subtitle: 'Palm Leaf',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
@@ -155,9 +166,75 @@ const PRODUCT_CATALOG = [
     detailedKey: null
   },
   {
+    id: 'prod-bamboo-handle-basket',
+    filename: 'bamboo_handle_basket.jpeg',
+    title: 'Bamboo Handle Basket',
+    subtitle: '8 × 8 × 3 inches',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 85,
+    shortDesc: 'Handcrafted eco-friendly bamboo handle basket, lightweight & reusable for hampers & gifts.',
+    detailedKey: 'Bamboo Handle Basket'
+  },
+  {
+    id: 'prod-oval-bamboo-basket',
+    filename: 'oval_bamboo_basket.jpeg',
+    title: 'Oval Bamboo Basket',
+    subtitle: '9 × 6.5 × 1 inch',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 95,
+    shortDesc: 'Handcrafted oval bamboo tray basket, ideal for snack serving, fruits, hampers & festive decor.',
+    detailedKey: 'Oval Bamboo Basket'
+  },
+  {
+    id: 'prod-round-bamboo-basket',
+    filename: 'round_bamboo_basket.jpeg',
+    title: 'Round Bamboo Basket',
+    subtitle: '7-inch Diameter',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 45,
+    shortDesc: 'Handcrafted 7" round bamboo basket, lightweight & durable for fruit storage, snacks & return gifts.',
+    detailedKey: 'Round Bamboo Basket'
+  },
+  {
+    id: 'prod-bamboo-basket-with-handle',
+    filename: 'bamboo_basket_with_handle.jpeg',
+    title: 'Large Bamboo Carry Basket',
+    subtitle: '16 × 11 × 5 inches',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 195,
+    shortDesc: 'Spacious 16×11×5" handcrafted bamboo carry basket with sturdy handle for hampers & storage.',
+    detailedKey: 'Bamboo Basket with Handle'
+  },
+  {
+    id: 'prod-square-bamboo-basket',
+    filename: 'square_bamboo_basket.jpeg',
+    title: 'Square Bamboo Basket (Sandal)',
+    subtitle: '6" | 8" | 10" Available',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 110,
+    shortDesc: 'Handcrafted sandal shade square bamboo basket available in 6×6", 8×8", and 10×10" sizes.',
+    detailedKey: 'Square Bamboo Basket'
+  },
+  {
+    id: 'prod-bamboo-tray',
+    filename: 'bamboo_tray.jpeg',
+    title: 'Bamboo Serving Tray',
+    subtitle: '8 × 12 × 3 inches',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 160,
+    shortDesc: 'Premium 8×12×3" handcrafted bamboo serving & organizing tray for tea, snacks, hampers & decor.',
+    detailedKey: 'Bamboo Tray'
+  },
+  {
     id: 'prod-coaster',
     filename: 'thing_rs25.jpeg',
-    title: 'Handcrafted Coaster',
+    title: 'Handcrafted Woven Coaster',
     subtitle: 'Natural Woven',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',

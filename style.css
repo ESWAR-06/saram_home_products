@@ -1,51 +1,98 @@
 /* ==========================================================================
-   SARAM HOME PRODUCTS - CSS STYLESHEET (REFINED)
-   Premium, Organic, Eco-friendly design theme.
+   SARAM HOME PRODUCTS — PREMIUM LUXURY BRAND STYLESHEET
+   Inspired by Forest Essentials × Aesop × Kama Ayurveda × Framer
+   Handcrafted Organic Premium Design System
    ========================================================================== */
 
-/* Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+/* Fonts Import — Cormorant Garamond for editorial luxury headings */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-/* CSS Variables */
+/* ===== PREMIUM DESIGN SYSTEM VARIABLES ===== */
 :root {
-  /* Color Palette */
-  --color-primary: #143224;        /* Dark Forest Green */
-  --color-primary-rgb: 20, 50, 36;
-  --color-primary-dark: #0a1b13;   /* Deep Dark Green */
-  --color-secondary: #4B5D4E;      /* Olive / Muted Green */
-  --color-secondary-light: #7E9282;/* Soft Sage Green */
-  --color-accent: #8B6240;         /* Wood / Earthy Brown */
-  --color-accent-light: #C5A07D;   /* Sand Wood tone */
-  --color-bg: #FAF7F0;             /* Premium Warm Cream */
-  --color-bg-alt: #F1ECE2;         /* Slightly darker Warm Cream */
-  --color-card: #FFFFFF;           /* Pure White */
-  --color-text: #1C2E24;           /* Soft charcoal with green tint */
-  --color-text-muted: #5C6B5F;     /* Muted organic gray */
-  --color-border: #E8E2D5;         /* Elegant warm border */
+  /* === DEEP FOREST PREMIUM PALETTE === */
+  --color-primary: #0F2D1E;           /* Deepest Forest Anchor */
+  --color-primary-rgb: 15, 45, 30;
+  --color-primary-dark: #071810;      /* Darkest Forest */
+  --color-primary-mid: #1B4A2E;       /* Mid Forest */
+  --color-emerald: #27734A;           /* Living Emerald — key brand */
+  --color-emerald-light: #3A9E68;     /* Bright Emerald */
+  --color-secondary: #3D5944;         /* Deep Olive */
+  --color-secondary-light: #6B8F76;   /* Muted Sage */
+  --color-sage: #8AAD8A;              /* Classic Sage */
+  --color-sage-light: #BDD4BD;        /* Light Sage */
+  --color-sage-pale: #E2EEE2;         /* Palest Sage */
+  --color-accent: #9C6B3C;            /* Warm Amber Wood */
+  --color-accent-light: #C8956A;      /* Golden Sand */
+  --color-gold: #C4924A;              /* Muted Gold — highlight */
+  --color-gold-light: #E8C580;        /* Warm Gold Glow */
+  --color-gold-pale: #F5E8D0;         /* Palest Gold */
+
+  /* === PREMIUM BACKGROUNDS — No flat beige/sandal === */
+  --color-bg: #F3F7F2;                /* Botanical Fresh Ivory */
+  --color-bg-alt: #EBF2EB;            /* Botanical Light */
+  --color-bg-sage: #E3EDE3;           /* Sage-Tinted */
+  --color-bg-warm: #F8FAF7;           /* Near-White Botanical */
+  --color-bg-forest: #0F2D1E;         /* Deep Forest (footer) */
+  --color-card: #FFFFFF;              /* Pure White */
+  --color-card-glass: rgba(255, 255, 255, 0.82); /* Glassmorphic White */
+
+  /* === GLASSMORPHISM TOKENS === */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-light: rgba(255, 255, 255, 0.88);
+  --glass-bg-dark: rgba(15, 45, 30, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-border-sage: rgba(138, 173, 138, 0.35);
+  --glass-blur: blur(18px);
+  --glass-blur-light: blur(10px);
+
+  /* === TEXT === */
+  --color-text: #152518;              /* Deepest Green-Black */
+  --color-text-muted: #426050;        /* Muted Forest */
+  --color-text-light: #6A8572;        /* Light sage text */
+  --color-border: #D8E6D8;            /* Crisp Sage Border */
+  --color-border-sage: #BDD4BD;       /* Medium Sage */
   --color-white: #FFFFFF;
-  
-  /* Fonts */
+
+  /* === FONT SYSTEM === */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', serif;  /* Editorial luxury */
   --font-heading: 'Outfit', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-accent: 'Playfair Display', serif;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(20, 50, 36, 0.03);
-  --shadow-md: 0 8px 24px rgba(20, 50, 36, 0.05);
-  --shadow-lg: 0 16px 40px rgba(20, 50, 36, 0.08);
-  --shadow-hover: 0 20px 48px rgba(20, 50, 36, 0.12);
+  /* === LAYERED SHADOW SYSTEM === */
+  --shadow-xs: 0 1px 6px rgba(15, 45, 30, 0.04);
+  --shadow-sm: 0 2px 14px rgba(15, 45, 30, 0.06), 0 1px 3px rgba(15, 45, 30, 0.04);
+  --shadow-md: 0 8px 32px rgba(15, 45, 30, 0.09), 0 2px 8px rgba(15, 45, 30, 0.05);
+  --shadow-lg: 0 18px 52px rgba(15, 45, 30, 0.12), 0 4px 14px rgba(15, 45, 30, 0.06);
+  --shadow-hover: 0 28px 64px rgba(15, 45, 30, 0.16), 0 8px 20px rgba(15, 45, 30, 0.08);
+  --shadow-card: 0 4px 24px rgba(15, 45, 30, 0.07), 0 1px 4px rgba(15, 45, 30, 0.04);
+  --shadow-glass: 0 8px 32px rgba(15, 45, 30, 0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+  --shadow-glow-green: 0 0 40px rgba(39, 115, 74, 0.25), 0 8px 24px rgba(15, 45, 30, 0.12);
+  --shadow-glow-gold: 0 0 30px rgba(196, 146, 74, 0.25), 0 6px 18px rgba(156, 107, 60, 0.12);
 
-  /* Transitions */
-  --transition-fast: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --transition-slow: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-  
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 20px;
+  /* === TRANSITION SYSTEM === */
+  --transition-fast: all 0.22s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-smooth: all 0.42s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: all 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* === BORDER RADIUS SYSTEM === */
+  --radius-xs: 6px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-full: 9999px;
-  
+
+  /* === SPACING SYSTEM (24/32/48/64) === */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+
   /* Layout */
   --header-height: 80px;
 }
@@ -139,18 +186,42 @@ img {
 }
 
 .section-tag {
-  display: inline-block;
+  display: block;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   color: var(--color-accent);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.section-tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+}
+
+/* Center-aligned section headers — no left-border accent */
+.section-header.text-center .section-tag {
+  padding-left: 0;
+  display: inline-block;
+}
+
+.section-header.text-center .section-tag::before {
+  display: none;
 }
 
 .section-title {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .section-subtitle {
@@ -166,48 +237,76 @@ img {
   align-items: center;
 }
 
-/* Button System */
+/* === PREMIUM BUTTON SYSTEM === */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 30px;
+  padding: 14px 32px;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   border-radius: var(--radius-full);
-  transition: var(--transition-smooth);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   border: 2px solid transparent;
-  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
   white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* Shimmer sweep effect on buttons */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: skewX(-15deg);
+  transition: none;
+}
+
+.btn:hover::after {
+  left: 150%;
+  transition: left 0.55s ease;
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary-mid) 0%, var(--color-primary) 100%);
   color: var(--color-white) !important;
-  border-color: var(--color-primary);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(15, 45, 30, 0.25), inset 0 1px 0 rgba(255,255,255,0.12);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-glow-green);
   color: var(--color-white) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.99);
 }
 
 .btn-secondary {
-  background-color: #FFFFFF;
+  background: var(--glass-bg-light);
   color: var(--color-primary) !important;
-  border-color: var(--color-primary);
+  border-color: rgba(15, 45, 30, 0.18);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--shadow-glass);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: var(--color-white) !important;
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-glow-green);
 }
 
 .btn-whatsapp {
@@ -260,9 +359,9 @@ img {
   color: var(--color-white) !important;
 }
 
-/* Header & Navigation */
+/* === PREMIUM GLASSMORPHISM HEADER === */
 .main-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -270,18 +369,19 @@ img {
   display: flex;
   align-items: center;
   z-index: 1000;
-  transition: var(--transition-smooth);
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(243, 247, 242, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(138, 173, 138, 0.2);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.8), 0 4px 24px rgba(15, 45, 30, 0.04);
 }
 
 .main-header.scrolled {
-  background-color: rgba(250, 247, 240, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  height: 70px;
-  border-bottom: 1px solid rgba(20, 50, 36, 0.08);
-  box-shadow: 0 4px 30px rgba(20, 50, 36, 0.02);
+  background: rgba(243, 247, 242, 0.95);
+  height: 68px;
+  border-bottom: 1px solid rgba(138, 173, 138, 0.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9), 0 8px 32px rgba(15, 45, 30, 0.08);
 }
 
 .header-container {
@@ -343,8 +443,9 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-accent);
-  transition: var(--transition-fast);
+  background: linear-gradient(90deg, var(--color-emerald) 0%, var(--color-gold) 100%);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 1px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -435,16 +536,51 @@ img {
   color: var(--color-accent);
 }
 
-/* Hero Section */
+/* === HERO SECTION — IMMERSIVE PREMIUM ENVIRONMENT === */
 .hero-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at 80% 20%, rgba(126, 146, 130, 0.15) 0%, rgba(250, 247, 240, 0) 60%),
-              radial-gradient(circle at 10% 80%, rgba(197, 160, 125, 0.1) 0%, rgba(250, 247, 240, 0) 50%);
+  background:
+    radial-gradient(ellipse at 65% 0%, rgba(39, 115, 74, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(196, 146, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 60%, rgba(138, 173, 138, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 30%, rgba(15, 45, 30, 0.03) 0%, transparent 60%),
+    linear-gradient(160deg, #F8FAF7 0%, #F3F7F2 40%, #EBF2EB 100%);
   padding-top: calc(var(--header-height) + 40px);
   position: relative;
   overflow: hidden;
+}
+
+/* Rich atmospheric overlay */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 15%, rgba(232, 197, 128, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse at 5% 70%, rgba(39, 115, 74, 0.06) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Botanical corner decoration right */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(138, 173, 138, 0.1) 0%, rgba(39, 115, 74, 0.04) 50%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+  animation: heroAmbientPulse 16s ease-in-out infinite alternate;
+}
+
+@keyframes heroAmbientPulse {
+  0% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+  100% { transform: scale(1.15) translate(-30px, 40px); opacity: 1; }
 }
 
 .hero-container {
@@ -457,22 +593,41 @@ img {
 }
 
 .hero-badge {
-  display: inline-block;
-  background-color: rgba(20, 50, 36, 0.06);
+  display: inline-flex;
+  align-items: center;
+  background: var(--glass-bg);
   color: var(--color-primary);
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 18px;
   border-radius: var(--radius-full);
-  margin-bottom: 24px;
+  border: 1px solid var(--glass-border-sage);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--shadow-glass);
+  white-space: nowrap;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-emerald-light) 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .hero-desc {
@@ -577,10 +732,24 @@ img {
   height: 60px;
 }
 
-/* About Section */
+/* === ABOUT SECTION — PREMIUM LINEN ATMOSPHERE === */
 .about-section {
-  background-color: var(--color-bg-alt);
+  background:
+    radial-gradient(ellipse at 0% 50%, rgba(39, 115, 74, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 100% 10%, rgba(196, 146, 74, 0.05) 0%, transparent 45%),
+    linear-gradient(160deg, var(--color-bg-warm) 0%, var(--color-bg-alt) 100%);
   position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%230F2D1E' fill-opacity='0.025'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .about-visual {
@@ -599,23 +768,31 @@ img {
   height: 480px;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(138, 173, 138, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-image-wrapper:hover .about-img {
+  transform: scale(1.02);
 }
 
 .experience-badge {
   position: absolute;
   bottom: 24px;
   right: -24px;
-  background-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold) 100%);
   color: var(--color-white);
-  padding: 20px 24px;
+  padding: 20px 28px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-glow-gold);
   display: flex;
   align-items: center;
   gap: 16px;
   z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .experience-badge .number {
@@ -685,9 +862,23 @@ img {
   line-height: 1.4;
 }
 
-/* Why Choose Us Section */
+/* === WHY CHOOSE US — GLASSMORPHIC CARDS === */
 .why-section {
-  background-color: var(--color-bg);
+  background:
+    radial-gradient(ellipse at 8% 50%, rgba(39, 115, 74, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 92% 20%, rgba(138, 173, 138, 0.08) 0%, transparent 50%),
+    linear-gradient(160deg, var(--color-bg-sage) 0%, var(--color-bg-alt) 60%, var(--color-bg) 100%);
+  position: relative;
+}
+
+.why-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%230F2D1E' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
 }
 
 .why-grid {
@@ -697,21 +888,64 @@ img {
 }
 
 .why-card {
-  background-color: var(--color-card);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: 40px 32px;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
-  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Animated top accent line */
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-emerald), var(--color-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+/* Shimmer sweep */
+.why-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: skewX(-15deg);
+  pointer-events: none;
+  transition: none;
+}
+
+.why-card:hover::after {
+  left: 150%;
+  transition: left 0.7s ease;
 }
 
 .why-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-secondary-light);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-glow-green);
+  border-color: rgba(39, 115, 74, 0.3);
 }
 
 .why-icon-box {
@@ -748,9 +982,22 @@ img {
   line-height: 1.5;
 }
 
-/* Products Section */
 .products-section {
-  background-color: var(--color-bg-alt);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(196, 146, 74, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 0% 100%, rgba(39, 115, 74, 0.05) 0%, transparent 45%),
+    linear-gradient(160deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+  position: relative;
+}
+
+.products-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect x='0' y='0' width='1' height='80' fill='%230F2D1E' fill-opacity='0.015'/%3E%3Crect x='0' y='0' width='80' height='1' fill='%230F2D1E' fill-opacity='0.015'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
 }
 
 .filter-tabs {
@@ -810,38 +1057,83 @@ img {
   to { transform: rotate(360deg); }
 }
 
-/* Product Card Design (Equal Heights, Consistent Alignment) */
+/* === PREMIUM GLASSMORPHIC PRODUCT CARDS === */
 .product-card {
-  background-color: var(--color-card);
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   overflow: hidden;
-  transition: var(--transition-smooth);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
   display: flex;
   flex-direction: column;
   position: relative;
   height: 100%;
+  will-change: transform;
+}
+
+/* Animated gradient border on hover */
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--radius-lg) + 1px);
+  background: linear-gradient(135deg, transparent 40%, rgba(39, 115, 74, 0.4) 70%, rgba(196, 146, 74, 0.3) 100%);
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+/* Shimmer sweep on hover */
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  transform: skewX(-15deg);
+  z-index: 3;
+  pointer-events: none;
+  transition: none;
+}
+
+.product-card:hover::after {
+  left: 150%;
+  transition: left 0.7s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-secondary-light);
+  transform: translateY(-10px) rotate3d(0, 0, 0, 0deg);
+  box-shadow: var(--shadow-hover), 0 0 0 1px rgba(138, 173, 138, 0.25);
+  border-color: rgba(138, 173, 138, 0.45);
 }
 
-/* Fixed image container with padding preventing edges touch */
+/* Product image wrapper — organic gradient background */
 .product-img-wrapper {
   height: 240px;
   width: 100%;
-  padding: 24px;
-  background-color: #FFFFFF;
+  padding: 20px;
+  background: linear-gradient(145deg,
+    rgba(242, 248, 242, 0.9) 0%,
+    rgba(235, 242, 235, 0.8) 50%,
+    rgba(228, 238, 228, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(216, 230, 216, 0.6);
 }
 
 .product-img {
@@ -1494,8 +1786,22 @@ img {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 30px 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 40px 0 34px;
+  margin-top: 24px;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.8;
 }
 
 .footer-bottom-flex {
@@ -2357,14 +2663,11 @@ img {
 
 /* Modal Add to Cart Button */
 .modal-add-cart-btn {
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
-  font-size: 1.05rem;
 }
 
 /* Responsive Adjustments for Cart & Checkout */
@@ -2722,22 +3025,39 @@ img {
 /* Modal action buttons row */
 .modal-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  width: 100%;
 }
 
 .modal-actions .btn {
   flex: 1;
-  min-width: 130px;
+  min-width: 0;
+  height: 48px;
+  padding: 0 24px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0;
+  box-sizing: border-box;
 }
 
 .modal-add-cart-btn {
-  gap: 8px;
+  margin-top: 0 !important;
+  width: auto;
+  font-size: 0.95rem !important;
 }
 
 .modal-close-btn {
-  /* inherits .btn-secondary */
+  margin-top: 0 !important;
+  width: auto;
+  font-size: 0.95rem !important;
 }
 
 /* Modal body scrollable on small screens */
@@ -2778,6 +3098,12 @@ img {
 
   .modal-actions {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    height: 46px;
   }
 
   .cart-cta-group {
@@ -2800,4 +3126,2071 @@ img {
     font-size: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   TOP PROMOTIONAL OFFER BANNER
+   ========================================================================== */
+
+.top-offer-banner {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+  padding: 9px 0;
+  font-size: 0.88rem;
+  position: relative;
+  z-index: 1001;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.offer-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.offer-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.offer-pill {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.offer-main-text {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: #FAF7F0;
+}
+
+.offer-main-text strong {
+  color: #F7D7A8;
+  font-weight: 700;
+}
+
+.offer-sub-text {
+  opacity: 0.85;
+  font-size: 0.82rem;
+  color: #E2DDD5;
+}
+
+.offer-btn {
+  color: #F7D7A8;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.84rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.offer-btn:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+/* Hero offer tag badge */
+.hero-badges-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.hero-offer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(139, 98, 64, 0.12);
+  color: var(--color-accent);
+  border: 1px solid rgba(139, 98, 64, 0.25);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.hero-offer-tag svg {
+  stroke: var(--color-accent);
+}
+
+/* ==========================================================================
+   MICRO-INTERACTIONS & ELEVATED POLISH
+   ========================================================================== */
+
+/* Refined Product Card Shadows & Transitions */
+.product-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(20, 50, 36, 0.1);
+  border-color: rgba(20, 50, 36, 0.18);
+}
+
+.product-img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* Button Subtle Lift & Hover Feedback */
+.btn {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Product Card Action Buttons Polish */
+.btn-add-cart {
+  box-shadow: 0 2px 8px rgba(20, 50, 36, 0.15);
+}
+
+.btn-add-cart:hover {
+  box-shadow: 0 6px 16px rgba(20, 50, 36, 0.25);
+}
+
+.btn-card-details:hover {
+  box-shadow: 0 4px 12px rgba(20, 50, 36, 0.12);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (320px - 1440px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .top-offer-banner {
+    padding: 8px 0;
+  }
+  
+  .offer-banner-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+  
+  .offer-banner-content {
+    justify-content: center;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+  
+  .offer-sub-text {
+    display: none; /* Hide secondary bullet text on small screens for clean single-line header */
+  }
+
+  .offer-btn {
+    font-size: 0.78rem;
+  }
+
+  .hero-badges-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .hero-offer-tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .offer-main-text {
+    font-size: 0.78rem;
+  }
+
+  .offer-pill {
+    font-size: 0.62rem;
+    padding: 2px 8px;
+  }
+}
+
+/* ==========================================================================
+   STATS TRUST STRIP
+   ========================================================================== */
+
+.stats-strip {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.04) 0%, transparent 60%),
+              radial-gradient(circle at 80% 50%, rgba(255,255,255,0.04) 0%, transparent 60%);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 32px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item {
+    padding: 20px 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .stat-item:nth-child(2),
+  .stat-item:nth-child(4) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-strip {
+    padding: 36px 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   ========================================================================== */
+
+.testimonials-section {
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '"';
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  font-family: var(--font-accent);
+  font-size: 400px;
+  color: rgba(20, 50, 36, 0.03);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonial-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-family: var(--font-accent);
+  font-size: 80px;
+  color: rgba(20, 50, 36, 0.06);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(20, 50, 36, 0.15);
+}
+
+.testimonial-stars {
+  font-size: 1.1rem;
+  color: #F59E0B;
+  letter-spacing: 2px;
+}
+
+.testimonial-quote {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-info strong {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testimonial-author-info span {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 28px 24px;
+  }
+
+  .testimonials-section::before {
+    font-size: 200px;
+    top: -30px;
+  }
+}
+
+/* ==========================================================================
+   PRODUCT ECO BADGE OVERLAY
+   ========================================================================== */
+
+.product-eco-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(20, 50, 36, 0.25);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   ENHANCED SECTION HEADER UNDERLINE
+   ========================================================================== */
+
+/* Section title — block display preserved; position:relative for ::after */
+.section-title {
+  position: relative;
+  display: block;
+}
+
+/* Centered underline accent for text-center headers only */
+.section-header.text-center .section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+/* ==========================================================================
+   FOOTER PREMIUM DIVIDER
+   ========================================================================== */
+
+.main-footer {
+  position: relative;
+}
+
+.main-footer::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-primary) 30%, var(--color-accent) 60%, transparent 100%);
+}
+
+/* ==========================================================================
+   PRODUCT CARD CATEGORY BADGE ENHANCEMENT
+   ========================================================================== */
+
+.product-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   SCROLL-REVEAL ANIMATION
+   ========================================================================== */
+
+/* Improve stagger for testimonials and why-cards */
+.testimonials-grid .testimonial-card:nth-child(1) { animation-delay: 0s; }
+.testimonials-grid .testimonial-card:nth-child(2) { animation-delay: 0.1s; }
+.testimonials-grid .testimonial-card:nth-child(3) { animation-delay: 0.2s; }
+
+.why-grid .why-card:nth-child(1) { animation-delay: 0s; }
+.why-grid .why-card:nth-child(2) { animation-delay: 0.07s; }
+.why-grid .why-card:nth-child(3) { animation-delay: 0.14s; }
+.why-grid .why-card:nth-child(4) { animation-delay: 0.21s; }
+.why-grid .why-card:nth-child(5) { animation-delay: 0.28s; }
+.why-grid .why-card:nth-child(6) { animation-delay: 0.35s; }
+
+/* ==========================================================================
+   MOBILE MISC REFINEMENTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .testimonials-section::before {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON
+   ========================================================================== */
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(20, 50, 36, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.25s ease;
+  z-index: 900;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  box-shadow: 0 10px 28px rgba(20, 50, 36, 0.4);
+  transform: translateY(-3px);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ==========================================================================
+   PREMIUM SECTION TRANSITIONS — ORGANIC WAVE DIVIDERS
+   ========================================================================== */
+
+/* Wrapper for wave-shaped section transition SVGs */
+.wave-divider {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
+/* Stats strip gets a soft wave on both ends */
+.stats-strip {
+  position: relative;
+}
+
+.stats-strip::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--color-bg-warm);
+  clip-path: ellipse(55% 100% at 50% 100%);
+  z-index: 2;
+}
+
+/* ==========================================================================
+   PREMIUM WHY-CARD ICON BOX UPGRADE
+   ========================================================================== */
+
+.why-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(20, 50, 36, 0.06) 0%, rgba(143, 168, 143, 0.1) 100%);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  box-shadow: 0 2px 8px rgba(20, 50, 36, 0.06);
+}
+
+.why-card:hover .why-icon-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-mid) 100%);
+  color: var(--color-white);
+  box-shadow: 0 6px 18px rgba(20, 50, 36, 0.22);
+  transform: translateY(-2px) scale(1.06);
+}
+
+.why-icon-box svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Why card typography */
+.why-card h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.why-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   PREMIUM FILTER TABS
+   ========================================================================== */
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 52px;
+  padding: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(4px);
+}
+
+.filter-tab {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  padding: 9px 22px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-tab:hover {
+  color: var(--color-primary);
+  background-color: rgba(20, 50, 36, 0.05);
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-mid) 100%);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(20, 50, 36, 0.22);
+}
+
+/* ==========================================================================
+   PRODUCT INFO PREMIUM POLISH
+   ========================================================================== */
+
+.product-info {
+  padding: 22px 20px 20px;
+}
+
+.product-meta {
+  border-top: 1px solid rgba(226, 221, 211, 0.8);
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   SECTION HEADER — PROPER STACKING (tag above h2)
+   ========================================================================== */
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-header .section-tag {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header.text-center .section-tag {
+  display: inline-block;
+}
+
+/* ==========================================================================
+   HERO SECTION PREMIUM POLISH
+   ========================================================================== */
+
+/* Ensure hero content is above the ::after decoration */
+.hero-content,
+.hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   ABOUT SECTION — FEATURE ICON UPGRADE
+   ========================================================================== */
+
+.feature-icon-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(20, 50, 36, 0.06) 0%, rgba(143, 168, 143, 0.1) 100%);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.feature-item:hover .feature-icon-circle,
+.feature-itemFull:hover .feature-icon-circle {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-mid) 100%);
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION POLISH
+   ========================================================================== */
+
+/* === TESTIMONIALS SECTION — WARM BOTANICAL GLASS === */
+.testimonials-section {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(196, 146, 74, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 80%, rgba(39, 115, 74, 0.06) 0%, transparent 50%),
+    linear-gradient(160deg, var(--color-bg-warm) 0%, var(--color-bg) 60%, var(--color-bg-alt) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  background: var(--glass-bg-light);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+  padding: 36px 32px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(138, 173, 138, 0.4);
+  box-shadow: var(--shadow-glow-green);
+}
+
+/* === CONTACT SECTION — WARM LINEN ATMOSPHERE === */
+.contact-section {
+  background:
+    radial-gradient(ellipse at 90% 80%, rgba(138, 173, 138, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 5% 20%, rgba(196, 146, 74, 0.06) 0%, transparent 45%),
+    linear-gradient(160deg, var(--color-bg-alt) 0%, var(--color-bg-sage) 100%);
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='1' cy='1' r='0.7' fill='%230F2D1E' fill-opacity='0.02'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   PRODUCT ECO BADGE — REFINED
+   ========================================================================== */
+
+.product-eco-badge {
+  background: linear-gradient(135deg, var(--color-primary-mid) 0%, var(--color-primary) 100%);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  box-shadow: 0 2px 6px rgba(20, 50, 36, 0.2);
+}
+
+/* ==========================================================================
+   COLLAGE PREMIUM — WARMER CIRCLE
+   ========================================================================== */
+
+.collage-bg-circle {
+  background: linear-gradient(135deg, rgba(241, 237, 227, 0.9) 0%, rgba(238, 242, 238, 0.8) 100%);
+  border: 2px dashed rgba(143, 168, 143, 0.4);
+}
+
+/* ==========================================================================
+   PREMIUM NAVIGATION — POLISH
+   ========================================================================== */
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 6px 0;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 1px;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   WHY SECTION — BOTANICAL DECORATIONS
+   ========================================================================== */
+
+/* Subtle leaf flourish in the top-right of why-section */
+.why-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* === STATS STRIP — PREMIUM DARK GLASS === */
+.stats-strip {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-mid) 100%);
+  padding: 56px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(39, 115, 74, 0.25) 0%, transparent 55%),
+    radial-gradient(circle at 85% 50%, rgba(196, 146, 74, 0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   FOOTER PREMIUM GLOW LINE (override)
+   ========================================================================== */
+
+.main-footer::before {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(20, 50, 36, 0.6) 25%,
+    var(--color-gold) 50%,
+    rgba(20, 50, 36, 0.6) 75%,
+    transparent 100%
+  );
+  height: 2px;
+}
+
+/* ==========================================================================
+   PRODUCT ZOOM HINT — REFINED
+   ========================================================================== */
+
+.product-img-zoom-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  z-index: 4;
+}
+
+.product-img-wrapper:hover .product-img-zoom-hint {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE REFINEMENTS (max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .filter-tabs {
+    border-radius: var(--radius-lg);
+    padding: 4px;
+    gap: 6px;
+  }
+
+  .why-card::before {
+    display: none; /* Hide the side accent on mobile for cleaner layout */
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .why-card {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-tabs {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .filter-tab {
+    font-size: 0.82rem;
+    padding: 8px 14px;
+  }
+}
+
+/* ==========================================================================
+   BOTANICAL SVG DECORATIONS POSITIONING (12% - 18% Opacity)
+   ========================================================================== */
+
+.botanical-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+  transition: transform 0.8s ease-out;
+}
+
+.botanical-deco--about {
+  top: -20px;
+  left: -20px;
+  width: 280px;
+  height: 280px;
+  transform: rotate(-15deg);
+}
+
+.botanical-deco--why {
+  top: 0;
+  right: -10px;
+  width: 240px;
+  height: 280px;
+  transform: rotate(5deg);
+}
+
+.botanical-deco--products {
+  top: -10px;
+  left: -10px;
+  width: 260px;
+  height: 260px;
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 768px) {
+  .botanical-deco {
+    width: 160px;
+    height: 160px;
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================================================
+   AMBIENT BLOBS & FLOATING LEAF ANIMATIONS
+   ========================================================================== */
+
+.ambient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.ambient-blob--1 {
+  top: -100px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(143, 168, 143, 0.25) 0%, rgba(20, 50, 36, 0.05) 70%, transparent 100%);
+  animation: ambientFloat1 20s ease-in-out infinite alternate;
+}
+
+.ambient-blob--2 {
+  bottom: 0;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(197, 160, 125, 0.2) 0%, rgba(139, 98, 64, 0.05) 70%, transparent 100%);
+  animation: ambientFloat2 24s ease-in-out infinite alternate;
+}
+
+@keyframes ambientFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.1); }
+  100% { transform: translate(-30px, 80px) scale(0.95); }
+}
+
+@keyframes ambientFloat2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, -40px) scale(1.08); }
+  100% { transform: translate(40px, -60px) scale(0.92); }
+}
+
+/* Floating SVG Leaves */
+.floating-leaf {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-leaf--1 {
+  top: 15%;
+  left: 8%;
+  width: 45px;
+  height: 68px;
+  animation: floatLeaf1 16s ease-in-out infinite;
+}
+
+.floating-leaf--2 {
+  bottom: 25%;
+  left: 48%;
+  width: 38px;
+  height: 56px;
+  animation: floatLeaf2 19s ease-in-out infinite;
+}
+
+@keyframes floatLeaf1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-24px) rotate(12deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes floatLeaf2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-28px) rotate(-15deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* ==========================================================================
+   HERO FLOATING COLLAGE IMAGES (Luxury Showcase Motion)
+   ========================================================================== */
+
+.collage-img-main {
+  animation: floatMain 14s ease-in-out infinite alternate;
+}
+
+.collage-img-sub1 {
+  animation: floatSub1 16s ease-in-out infinite alternate;
+}
+
+.collage-img-sub2 {
+  animation: floatSub2 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatMain {
+  0% { transform: rotate(-5deg) translateY(0); }
+  100% { transform: rotate(-3deg) translateY(-12px); }
+}
+
+@keyframes floatSub1 {
+  0% { transform: rotate(6deg) translateY(0); }
+  100% { transform: rotate(8deg) translateY(-14px); }
+}
+
+@keyframes floatSub2 {
+  0% { transform: rotate(-3deg) translateY(0); }
+  100% { transform: rotate(-5deg) translateY(-10px); }
+}
+
+/* Floating Circular Handcrafted Seal Badge */
+.hero-seal-badge {
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 24px rgba(20, 50, 36, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8;
+  animation: floatSeal 12s ease-in-out infinite alternate;
+}
+
+.seal-svg-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateSeal 25s linear infinite;
+}
+
+@keyframes rotateSeal {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes floatSeal {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-8px) scale(1.03); }
+}
+
+.seal-icon {
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-seal-badge {
+    display: none;
+  }
+
+  .floating-leaf {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   SUNLIGHT RAY SHIMMER (Hero Magical Atmosphere)
+   ========================================================================== */
+
+.sunlight-ray {
+  position: absolute;
+  top: -150px;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(247, 215, 168, 0.25) 0%, rgba(200, 220, 200, 0.08) 50%, transparent 80%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  animation: sunlightShift 18s ease-in-out infinite alternate;
+}
+
+@keyframes sunlightShift {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(80px, 40px) scale(1.15); opacity: 0.9; }
+  100% { transform: translate(-40px, 60px) scale(0.95); opacity: 0.6; }
+}
+
+/* ==========================================================================
+   ADDITIONAL SECTION SVG ARTWORK POSITIONING
+   ========================================================================== */
+
+.botanical-deco--testimonials {
+  bottom: -20px;
+  right: -20px;
+  width: 260px;
+  height: 260px;
+  transform: rotate(20deg);
+}
+
+.botanical-deco--contact {
+  bottom: 0;
+  left: -20px;
+  width: 280px;
+  height: 280px;
+  transform: rotate(-10deg);
+}
+
+/* ==========================================================================
+   OFFER BANNER GENTLE GLOW PULSE
+   ========================================================================== */
+
+.top-offer-banner {
+  animation: bannerGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes bannerGlow {
+  0% { box-shadow: 0 2px 10px rgba(20, 50, 36, 0.1); }
+  100% { box-shadow: 0 4px 18px rgba(139, 98, 64, 0.28); }
+}
+
+/* ==========================================================================
+   HERO CORNER BOTANICAL ARTWORK & NATURE ANIMATIONS
+   ========================================================================== */
+
+.hero-corner-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.hero-corner-deco--tr {
+  top: -30px;
+  right: -30px;
+  width: 320px;
+  height: 320px;
+  transform: rotate(-10deg);
+}
+
+.hero-corner-deco--bl {
+  bottom: 20px;
+  left: -40px;
+  width: 300px;
+  height: 300px;
+  transform: rotate(15deg);
+}
+
+/* Drifting Pollen Particles */
+.pollen-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(247, 215, 168, 0.7);
+  box-shadow: 0 0 10px rgba(184, 147, 90, 0.6);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pollen-particle--1 {
+  top: 25%;
+  left: 20%;
+  animation: pollenDrift1 14s ease-in-out infinite alternate;
+}
+
+.pollen-particle--2 {
+  top: 45%;
+  left: 42%;
+  width: 4px;
+  height: 4px;
+  animation: pollenDrift2 18s ease-in-out infinite alternate;
+}
+
+.pollen-particle--3 {
+  top: 65%;
+  left: 15%;
+  width: 5px;
+  height: 5px;
+  animation: pollenDrift1 22s ease-in-out infinite alternate;
+}
+
+.pollen-particle--4 {
+  top: 30%;
+  right: 18%;
+  width: 7px;
+  height: 7px;
+  animation: pollenDrift2 16s ease-in-out infinite alternate;
+}
+
+@keyframes pollenDrift1 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  50% { transform: translate(40px, -30px) scale(1.3); opacity: 0.8; }
+  100% { transform: translate(-20px, -60px) scale(0.9); opacity: 0.3; }
+}
+
+@keyframes pollenDrift2 {
+  0% { transform: translate(0, 0) scale(0.9); opacity: 0.3; }
+  50% { transform: translate(-50px, -40px) scale(1.4); opacity: 0.85; }
+  100% { transform: translate(30px, -75px) scale(1); opacity: 0.2; }
+}
+
+/* Nature Life: Butterfly Fluttering Path */
+.nature-butterfly {
+  position: absolute;
+  top: 30%;
+  right: 28%;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 3;
+  animation: butterflyFlutter 24s ease-in-out infinite;
+}
+
+@keyframes butterflyFlutter {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(40px, -30px) rotate(15deg) scale(1.05); }
+  50% { transform: translate(15px, -70px) rotate(-10deg) scale(0.95); }
+  75% { transform: translate(-35px, -35px) rotate(20deg) scale(1.02); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Nature Life: Bee Flying Motion */
+.nature-bee {
+  position: absolute;
+  bottom: 25%;
+  left: 36%;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 3;
+  animation: beeFlight 19s ease-in-out infinite;
+}
+
+@keyframes beeFlight {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(-30px, -25px) rotate(-15deg); }
+  66% { transform: translate(25px, -45px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+  .hero-corner-deco,
+  .pollen-particle,
+  .nature-butterfly,
+  .nature-bee {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   PREMIUM ANIMATION SYSTEM — GLOBAL KEYFRAMES
+   ========================================================================== */
+
+/* Morphing blob background animation */
+@keyframes morphBlob {
+  0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%  { border-radius: 50% 60% 30% 60% / 40% 60% 60% 40%; }
+  75%  { border-radius: 60% 30% 60% 40% / 60% 40% 50% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+/* Leaf gentle sway */
+@keyframes leafSway {
+  0%   { transform: rotate(-5deg) translateY(0); }
+  33%  { transform: rotate(2deg) translateY(-6px); }
+  66%  { transform: rotate(-3deg) translateY(3px); }
+  100% { transform: rotate(-5deg) translateY(0); }
+}
+
+/* Premium glow pulse */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 12px rgba(39, 115, 74, 0.2), 0 0 24px rgba(39, 115, 74, 0.1); }
+  50%  { box-shadow: 0 0 24px rgba(39, 115, 74, 0.35), 0 0 48px rgba(39, 115, 74, 0.18); }
+  100% { box-shadow: 0 0 12px rgba(39, 115, 74, 0.2), 0 0 24px rgba(39, 115, 74, 0.1); }
+}
+
+/* Gold glow pulse */
+@keyframes goldGlowPulse {
+  0%   { box-shadow: 0 0 12px rgba(196, 146, 74, 0.25), 0 4px 16px rgba(156, 107, 60, 0.12); }
+  50%  { box-shadow: 0 0 28px rgba(196, 146, 74, 0.4), 0 8px 28px rgba(156, 107, 60, 0.2); }
+  100% { box-shadow: 0 0 12px rgba(196, 146, 74, 0.25), 0 4px 16px rgba(156, 107, 60, 0.12); }
+}
+
+/* Gradient text shimmer */
+@keyframes gradientShimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Floating gentle bob */
+@keyframes gentleFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Section content reveal */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Shimmer sweep animation */
+@keyframes shimmerSweep {
+  from { left: -100%; }
+  to   { left: 150%; }
+}
+
+/* Footer leaf drift */
+@keyframes footerLeafDrift {
+  0%   { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0.15; }
+  25%  { transform: translateY(-20px) rotate(8deg) translateX(10px); opacity: 0.22; }
+  50%  { transform: translateY(-8px) rotate(-5deg) translateX(-5px); opacity: 0.18; }
+  75%  { transform: translateY(-30px) rotate(12deg) translateX(8px); opacity: 0.12; }
+  100% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0.15; }
+}
+
+/* ==========================================================================
+   PREMIUM SECTION TYPOGRAPHY SYSTEM
+   ========================================================================== */
+
+/* Use Cormorant for display headings — editorial luxury feel */
+.hero-title,
+.section-title,
+h1, h2 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Section tag — premium uppercase with gradient */
+.section-tag {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-emerald);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 22px;
+}
+
+.section-tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-gold));
+  border-radius: 1px;
+}
+
+.section-header.text-center .section-tag {
+  padding-left: 0;
+  display: inline-block;
+}
+
+.section-header.text-center .section-tag::before {
+  display: none;
+}
+
+/* Section title gradient underline */
+.section-header.text-center .section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-emerald), var(--color-gold));
+  border-radius: 2px;
+  margin: 14px auto 0;
+  opacity: 0.9;
+}
+
+/* Highlight class — animated gradient text */
+.highlight {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-gold) 60%, var(--color-emerald-light) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShimmer 6s linear infinite;
+}
+
+/* ==========================================================================
+   CONTACT SECTION — GLASS CARD ICONS
+   ========================================================================== */
+
+.contact-detail-icon {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border-sage);
+  box-shadow: var(--shadow-glass);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-detail-item:hover .contact-detail-icon {
+  background: var(--color-emerald);
+  color: white;
+  border-color: var(--color-emerald);
+  box-shadow: var(--shadow-glow-green);
+  transform: scale(1.08) rotate(5deg);
+}
+
+/* Social icons — glass premium */
+.social-icon-link {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border-sage);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-icon-link:hover {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-4px) scale(1.12);
+}
+
+/* Contact map card — glass treatment */
+.contact-map {
+  background: var(--glass-bg-light);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+/* ==========================================================================
+   FILTER TABS — GLASSMORPHISM
+   ========================================================================== */
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 52px;
+  padding: 8px;
+  background: var(--glass-bg);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--glass-border-sage);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--shadow-glass);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-tab {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-tab:hover {
+  color: var(--color-primary);
+  background: rgba(15, 45, 30, 0.06);
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-mid) 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(15, 45, 30, 0.25);
+}
+
+/* ==========================================================================
+   PRODUCT PRICE — GOLD GRADIENT TREATMENT
+   ========================================================================== */
+
+.product-price {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   WHY CARD ICON BOX — PREMIUM GLOW
+   ========================================================================== */
+
+.why-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(39, 115, 74, 0.08) 0%, rgba(138, 173, 138, 0.12) 100%);
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(39, 115, 74, 0.08);
+  border: 1px solid rgba(39, 115, 74, 0.12);
+}
+
+.why-card:hover .why-icon-box {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  color: white;
+  box-shadow: var(--shadow-glow-green);
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ==========================================================================
+   FEATURE ICON CIRCLES — ABOUT SECTION UPGRADE
+   ========================================================================== */
+
+.feature-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--glass-border-sage);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-item:hover .feature-icon-circle,
+.feature-itemFull:hover .feature-icon-circle {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-glow-green);
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   MODAL — PREMIUM GLASS CONTAINER
+   ========================================================================== */
+
+.modal-container {
+  background: rgba(248, 250, 247, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 32px 80px rgba(15, 45, 30, 0.2), 0 0 0 1px rgba(138, 173, 138, 0.15);
+}
+
+.modal-close {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border-sage);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: rotate(90deg) scale(1.08);
+}
+
+/* ==========================================================================
+   FOOTER BOTANICAL LEAF PARTICLES
+   ========================================================================== */
+
+.footer-leaf-particle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+.footer-leaf-particle--1 {
+  top: 20px;
+  left: 5%;
+  width: 60px;
+  height: 90px;
+  animation: footerLeafDrift 20s ease-in-out infinite;
+}
+
+.footer-leaf-particle--2 {
+  top: 40px;
+  right: 8%;
+  width: 48px;
+  height: 72px;
+  animation: footerLeafDrift 25s ease-in-out infinite reverse;
+}
+
+.footer-leaf-particle--3 {
+  bottom: 60px;
+  left: 35%;
+  width: 40px;
+  height: 60px;
+  animation: footerLeafDrift 18s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+/* Footer social icons — glass on dark */
+.footer-socials a {
+  color: rgba(255, 255, 255, 0.65);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-socials a:hover {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-4px) scale(1.12);
+}
+
+/* ==========================================================================
+   OFFER BANNER — ANIMATED GRADIENT
+   ========================================================================== */
+
+.top-offer-banner {
+  background: linear-gradient(90deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary) 30%,
+    var(--color-primary-mid) 60%,
+    var(--color-primary) 80%,
+    var(--color-primary-dark) 100%);
+  background-size: 200% auto;
+  animation: bannerGlow 6s ease-in-out infinite alternate,
+             gradientShimmer 10s linear infinite;
+  position: relative;
+  z-index: 1001;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.offer-pill {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-accent) 100%);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  animation: goldGlowPulse 4s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   BACK TO TOP — EMERALD GLOW
+   ========================================================================== */
+
+.back-to-top {
+  background: linear-gradient(135deg, var(--color-primary-mid) 0%, var(--color-emerald) 100%);
+  box-shadow: 0 6px 24px rgba(39, 115, 74, 0.35);
+}
+
+.back-to-top:hover {
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-4px) scale(1.08);
+}
+
+/* ==========================================================================
+   COLLAGE BACKGROUND CIRCLE — GLASS TREATMENT
+   ========================================================================== */
+
+.collage-bg-circle {
+  background: linear-gradient(135deg, rgba(235, 242, 235, 0.92) 0%, rgba(228, 242, 238, 0.85) 100%);
+  border: 2px dashed rgba(138, 173, 138, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Collage images — richer shadow + glow */
+.collage-img {
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(138, 173, 138, 0.15);
+}
+
+.collage-img:hover {
+  box-shadow: var(--shadow-hover), 0 0 30px rgba(39, 115, 74, 0.15);
+}
+
+/* ==========================================================================
+   PRODUCT ECO BADGE — PREMIUM FLOATING GLASS
+   ========================================================================== */
+
+.product-eco-badge {
+  background: linear-gradient(135deg, var(--color-primary-mid) 0%, var(--color-emerald) 100%);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  box-shadow: 0 4px 12px rgba(39, 115, 74, 0.3);
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   HERO SEAL BADGE — ENHANCED GLASS
+   ========================================================================== */
+
+.hero-seal-badge {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(138, 173, 138, 0.3);
+  box-shadow: var(--shadow-glass), 0 0 0 4px rgba(138, 173, 138, 0.1);
+  animation: floatSeal 14s ease-in-out infinite alternate, goldGlowPulse 6s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   PREMIUM CART ICON — GLASS PILL
+   ========================================================================== */
+
+.nav-cart-btn {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  border: 1px solid var(--glass-border-sage);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-cart-btn:hover {
+  background: var(--color-primary);
+  border-color: transparent;
+  color: white;
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ==========================================================================
+   SECTION TRANSITIONS — ORGANIC WAVE DIVIDERS
+   ========================================================================== */
+
+/* Add organic transition between stats and about section */
+.stats-strip::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: var(--color-bg-warm);
+  clip-path: ellipse(56% 100% at 50% 100%);
+  z-index: 2;
+}
+
+/* ==========================================================================
+   MAIN FOOTER — DARK LUXURY FOREST GREEN
+   ========================================================================== */
+
+.main-footer {
+  background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-primary-mid) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top glow line */
+.main-footer::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(39, 115, 74, 0.5) 20%,
+    var(--color-gold) 50%,
+    rgba(39, 115, 74, 0.5) 80%,
+    transparent 100%);
+}
+
+/* ==========================================================================
+   NAV LINK — ACTIVE STATE GRADIENT
+   ========================================================================== */
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  padding: 6px 0;
+  position: relative;
+  letter-spacing: 0.01em;
+  transition: color 0.25s ease;
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   PRODUCT CARD — CTA BUTTON PREMIUM
+   ========================================================================== */
+
+.btn-add-cart {
+  background: linear-gradient(135deg, var(--color-primary-mid) 0%, var(--color-primary) 100%);
+  color: white !important;
+  border: none;
+  box-shadow: 0 3px 12px rgba(15, 45, 30, 0.22);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-add-cart:hover {
+  background: linear-gradient(135deg, var(--color-emerald) 0%, var(--color-primary-mid) 100%);
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-2px);
+}
+
+.btn-card-details {
+  background: var(--glass-bg-light);
+  color: var(--color-primary) !important;
+  border: 1.5px solid rgba(15, 45, 30, 0.2);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+}
+
+.btn-card-details:hover {
+  background: var(--color-primary);
+  color: white !important;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow-green);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   MOBILE NAV OVERLAY — GLASS TREATMENT
+   ========================================================================== */
+
+.mobile-nav-overlay {
+  background: rgba(243, 247, 242, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ==========================================================================
+   MOUSE PARALLAX JS SUPPORT
+   ========================================================================== */
+
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* ==========================================================================
+   RESPONSIVE — PREMIUM ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Reduce glass blur on mobile for performance */
+  .why-card,
+  .product-card,
+  .testimonial-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Simpler hero background on mobile */
+  .hero-section {
+    background:
+      radial-gradient(ellipse at 70% 10%, rgba(39, 115, 74, 0.08) 0%, transparent 50%),
+      linear-gradient(160deg, #F8FAF7 0%, #F3F7F2 100%);
+  }
+
+  .footer-leaf-particle {
+    display: none;
+  }
+
+  /* Hero title smaller display font size on small screens */
+  .hero-title {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Disable heavy backdrop-filters on very small screens */
+  .why-card,
+  .product-card,
+  .testimonial-card,
+  .main-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 

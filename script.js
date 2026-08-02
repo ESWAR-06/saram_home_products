@@ -13,6 +13,57 @@
 
 const PRODUCT_DETAILS = {
 
+  'Citrus Bio Enzyme': {
+    price: 80,
+    tagline: 'Natural • Powerful • Safe Multi-Purpose Cleaner & Plant Booster',
+    netVolume: '500 ml',
+    description: 'A naturally fermented multi-purpose cleaner made from citrus peels, jaggery, and water. Safe, eco-friendly, and biodegradable, it is ideal for everyday household cleaning while helping reduce the use of harsh chemicals.',
+    uses: [
+      'Floor cleaning',
+      'Bathroom and toilet cleaning',
+      'Kitchen surface cleaning',
+      'Glass and mirror cleaning',
+      'Odour control',
+      'General household cleaning',
+      'Plant booster & soil fertility'
+    ],
+    benefits: [
+      '100% Naturally Fermented Formula',
+      'Multi-Purpose Household Cleaner',
+      'Eco-Friendly & Biodegradable',
+      'Chemical-Free & Safe for Home',
+      'Earth Safe: Safe for You, Safe for Earth',
+      'Enhances Plant Soil Health & Flowering'
+    ],
+    howToUse: [
+      'Floor Cleaning: Mix 30–50 ml in half a bucket of water for mopping.',
+      'Surface & Glass Cleaning: Mix 20 ml in 1 litre of water and spray/wipe.',
+      'Bathroom & Toilet Cleaning: Apply directly or diluted, scrub, and rinse.',
+      'Odour Control: Spray diluted solution in sink drains, trash cans, or damp areas.',
+      'For Plants: Dilute 30 ml in 1 litre of water. Use for watering once a week.'
+    ],
+    suitableFor: [
+      'Floors & Tiles',
+      'Bathroom & Toilet Surfaces',
+      'Kitchen Countertops',
+      'Glass & Mirrors',
+      'Drain & Odour Control',
+      'Garden Plants & Soil'
+    ],
+    ingredients: [
+      'Citrus / Lemon Peels',
+      'Raw Jaggery',
+      'Water',
+      'Natural Bio Enzymes'
+    ],
+    badges: [
+      'Naturally Fermented',
+      'Chemical Free',
+      'Eco Friendly',
+      'Multi-Purpose & Plant Booster'
+    ]
+  },
+
   'Hand Wash': {
     price: 95,
     tagline: 'Clean Hands, Healthy Life',
@@ -216,6 +267,141 @@ const PRODUCT_DETAILS = {
       'Store in a dry place between uses.',
       'Replace every 2–3 months or as recommended by your dentist.'
     ]
+  },
+
+  'Bamboo Handle Basket': {
+    price: 85,
+    tagline: 'Eco-Friendly & Elegant Handmade Gift Basket',
+    size: '8 × 8 × 3 inches',
+    material: 'Natural Bamboo',
+    description: 'Handcrafted from premium natural bamboo, this eco-friendly handle basket is lightweight, durable, reusable, and biodegradable. Perfect for return gifts, gift hampers, flower arrangements, fruit storage, festive gifting, home organization, and decorative displays. A sustainable and elegant alternative to plastic baskets.',
+    uses: [
+      'Return gifts and festive gifting',
+      'Gift hampers and flower arrangements',
+      'Fruit storage and table serving',
+      'Home and kitchen organization',
+      'Decorative displays'
+    ],
+    benefits: [
+      '100% Handcrafted from Premium Natural Bamboo',
+      'Lightweight, Durable, Reusable & Biodegradable',
+      'Sturdy Built-in Handle for Easy Carrying',
+      'Sustainable & Elegant Alternative to Plastic'
+    ],
+    badges: ['100% Natural Bamboo', 'Handcrafted', 'Eco Friendly', 'Reusable']
+  },
+
+  'Oval Bamboo Basket': {
+    price: 95,
+    tagline: 'Charming Handcrafted Oval Serving & Storage Basket',
+    size: '9 × 6.5 × 1 inch',
+    material: 'Natural Bamboo',
+    description: 'Handcrafted from premium natural bamboo, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, fruit storage, snack serving, home organization, and festive décor.',
+    uses: [
+      'Return gifts and gift hampers',
+      'Fruit storage and snack serving',
+      'Home organization',
+      'Festive décor'
+    ],
+    benefits: [
+      'Premium Natural Bamboo Craftsmanship',
+      'Sleek Oval Design Ideal for Serving',
+      'Lightweight, Durable & Reusable',
+      'Biodegradable & Eco-Friendly'
+    ],
+    badges: ['Natural Bamboo', 'Handcrafted', 'Eco Friendly', 'Biodegradable']
+  },
+
+  'Round Bamboo Basket': {
+    price: 45,
+    tagline: 'Versatile 7-inch Handcrafted Round Bamboo Basket',
+    size: '7-inch Diameter',
+    material: 'Natural Bamboo',
+    description: 'Handcrafted from premium natural bamboo, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, fruit storage, snack serving, home organization, and festive décor.',
+    uses: [
+      'Return gifts and festive packaging',
+      'Gift hampers and party favors',
+      'Fruit storage and snack serving',
+      'Home organization'
+    ],
+    benefits: [
+      'Handcrafted 100% Natural Bamboo',
+      'Compact 7-inch Round Shape',
+      'Lightweight, Durable & Reusable',
+      'Wallet-Friendly Eco Alternative'
+    ],
+    badges: ['100% Bamboo', 'Handmade', 'Eco Friendly', 'Affordable']
+  },
+
+  'Bamboo Basket with Handle': {
+    price: 195,
+    tagline: 'Spacious & Sturdy Handmade Bamboo Carry Basket',
+    size: '16 × 11 × 5 inches',
+    material: 'Natural Bamboo',
+    description: 'Beautifully handcrafted from premium natural bamboo, this spacious basket with a sturdy handle is eco-friendly, lightweight, durable, and reusable. Perfect for gift hampers, return gifts, fruit and vegetable storage, picnic essentials, festive gifting, home organization, and decorative displays. A sustainable alternative to plastic baskets.',
+    uses: [
+      'Gift hampers and return gifts',
+      'Fruit and vegetable storage',
+      'Picnic essentials and outings',
+      'Festive gifting and party favors',
+      'Home organization and decorative displays'
+    ],
+    benefits: [
+      'Extra Large 16 × 11 × 5 inch Capacity',
+      'Strong Ergonomic Handle for Easy Transport',
+      '100% Premium Natural Bamboo Construction',
+      'Durable, Reusable & Sustainable Choice'
+    ],
+    badges: ['Extra Large', 'Sturdy Handle', '100% Bamboo', 'Eco Friendly']
+  },
+
+  'Square Bamboo Basket': {
+    price: 110,
+    tagline: 'Handcrafted Sandal Shade Square Bamboo Basket',
+    color: 'Sandal',
+    material: 'Natural Bamboo',
+    description: 'Handcrafted from premium natural bamboo in an elegant sandal shade, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, festive packaging, home organization, fruit storage, and decorative displays. A stylish and sustainable alternative to plastic baskets.',
+    availableSizes: [
+      '6 × 6 inch — ₹110',
+      '8 × 8 inch — ₹150',
+      '10 × 10 inch — ₹175'
+    ],
+    uses: [
+      'Return gifts and gift hampers',
+      'Festive packaging and celebrations',
+      'Home organization and fruit storage',
+      'Decorative displays'
+    ],
+    benefits: [
+      'Elegant Sandal Color Shade',
+      'Available in Multiple Versatile Sizes',
+      'Handcrafted from Premium Natural Bamboo',
+      'Lightweight, Durable & Biodegradable'
+    ],
+    badges: ['Sandal Color', 'Available in 3 Sizes', '100% Natural Bamboo', 'Handcrafted']
+  },
+
+  'Bamboo Tray': {
+    price: 160,
+    tagline: 'Handcrafted Multi-Purpose Bamboo Serving & Organizing Tray',
+    size: '8 × 12 × 3 inches',
+    material: 'Natural Bamboo',
+    description: 'Crafted from premium natural bamboo, this handcrafted tray is eco-friendly, lightweight, durable, and reusable. Its elegant design makes it perfect for serving, organizing, gifting, and decorative displays. A sustainable alternative to plastic trays for everyday use.',
+    uses: [
+      'Tea and coffee serving',
+      'Fruit and snack presentation',
+      'Gift hampers',
+      'Home and kitchen organization',
+      'Puja and festive arrangements',
+      'Decorative displays'
+    ],
+    benefits: [
+      'Handcrafted from Premium Natural Bamboo',
+      'Raised 3-inch Borders to Keep Items Secure',
+      'Lightweight, Durable & Reusable',
+      'Ideal for Kitchen, Dining & Puja Use'
+    ],
+    badges: ['100% Bamboo', 'Handcrafted', 'Multipurpose Tray', 'Eco Friendly']
   }
 
 };
@@ -313,6 +499,18 @@ function openDetailsModal(productId) {
       </div>`;
   }
 
+  // Build uses HTML
+  let usesHTML = '';
+  if (details.uses && details.uses.length) {
+    usesHTML = `
+      <div class="modal-section">
+        <h4 class="modal-section-title">Uses & Applications</h4>
+        <ul class="modal-list">
+          ${details.uses.map(u => `<li>${u}</li>`).join('')}
+        </ul>
+      </div>`;
+  }
+
   // Build benefits HTML
   let benefitsHTML = '';
   if (details.benefits && details.benefits.length) {
@@ -361,6 +559,34 @@ function openDetailsModal(productId) {
       </div>`;
   }
 
+  // Build specs HTML (size, material, color)
+  let specsHTML = '';
+  let specsList = [];
+  if (details.size) specsList.push(`<strong>Size:</strong> ${details.size}`);
+  if (details.material) specsList.push(`<strong>Material:</strong> ${details.material}`);
+  if (details.color) specsList.push(`<strong>Color:</strong> ${details.color}`);
+  if (specsList.length) {
+    specsHTML = `
+      <div class="modal-section">
+        <h4 class="modal-section-title">Specifications</h4>
+        <ul class="modal-list">
+          ${specsList.map(s => `<li>${s}</li>`).join('')}
+        </ul>
+      </div>`;
+  }
+
+  // Build available sizes HTML
+  let sizesHTML = '';
+  if (details.availableSizes && details.availableSizes.length) {
+    sizesHTML = `
+      <div class="modal-section">
+        <h4 class="modal-section-title">Available Sizes & Pricing</h4>
+        <ul class="modal-list">
+          ${details.availableSizes.map(sz => `<li>${sz}</li>`).join('')}
+        </ul>
+      </div>`;
+  }
+
   // Build directions / storage HTML
   let directionsHTML = '';
   if (details.directions) {
@@ -385,7 +611,7 @@ function openDetailsModal(productId) {
   body.innerHTML = `
     <div class="modal-grid">
       <div class="modal-img-wrapper">
-        <img src="images/${product.filename}" alt="${product.title}" loading="lazy">
+        <img src="images/${product.filename}" alt="${product.title}" loading="lazy" onerror="this.onerror=null; this.src='images/bio_enzyme_floor_cleaner.jpeg';">
       </div>
       <div class="modal-content-area">
         <span class="product-category">${product.categoryLabel}</span>
@@ -397,6 +623,9 @@ function openDetailsModal(productId) {
         </div>
         ${badgesHTML}
         <p class="modal-description">${details.description}</p>
+        ${specsHTML}
+        ${sizesHTML}
+        ${usesHTML}
         ${benefitsHTML}
         ${suitableHTML}
         ${ingredientsHTML}
@@ -435,8 +664,16 @@ function renderProducts() {
   if (!grid) return;
   grid.innerHTML = '';
 
+  // Eco badge config by category
+  const ecoBadgeMap = {
+    cleaning: { icon: '🌿', text: 'Eco Clean' },
+    skincare: { icon: '✨', text: 'Natural' },
+    handmade: { icon: '🎋', text: 'Handmade' }
+  };
+
   PRODUCT_CATALOG.forEach(product => {
     const hasDetails = product.detailedKey && PRODUCT_DETAILS[product.detailedKey];
+    const badge = ecoBadgeMap[product.category];
 
     const card = document.createElement('div');
     card.className = 'product-card';
@@ -449,6 +686,7 @@ function renderProducts() {
            role="button" 
            tabindex="0" 
            aria-label="View ${product.title} image">
+        ${badge ? `<span class="product-eco-badge" aria-hidden="true">${badge.icon} ${badge.text}</span>` : ''}
         <div class="product-img-zoom-hint">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
         </div>
@@ -456,7 +694,7 @@ function renderProducts() {
              alt="${product.title}" 
              class="product-img" 
              loading="lazy"
-             onerror="this.onerror=null;">
+             onerror="this.onerror=null; this.src='images/bio_enzyme_floor_cleaner.jpeg';">
       </div>
       <div class="product-info">
         <span class="product-category">${product.categoryLabel}</span>
@@ -547,7 +785,7 @@ function renderCartPage() {
         </svg>
         <h3>Your Cart is Empty</h3>
         <p>Explore our natural eco-friendly products and traditional handmade items.</p>
-        <button class="btn btn-primary" onclick="navigateToSection('products')">Continue Shopping</button>
+        <a href="index.html#products" class="btn btn-primary">Continue Shopping</a>
       </div>
     `;
     return;
@@ -592,8 +830,8 @@ function renderCartPage() {
       <div class="cart-summary-actions">
         <button class="btn-clear-cart" onclick="CartManager.clearCart()">Clear Cart</button>
         <div class="cart-cta-group">
-          <button class="btn btn-secondary" onclick="navigateToSection('products')">Continue Shopping</button>
-          <button class="btn btn-primary" onclick="navigateToSection('checkout')">Proceed to Checkout</button>
+          <a href="index.html#products" class="btn btn-secondary">Continue Shopping</a>
+          <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
         </div>
       </div>
     </div>
@@ -607,7 +845,9 @@ function renderCartPage() {
 function renderCheckoutPage() {
   const items = CartManager.getCartWithDetails();
   if (items.length === 0) {
-    navigateToSection('cart');
+    if (window.location.pathname.endsWith('checkout.html')) {
+      window.location.href = 'cart.html';
+    }
     return;
   }
 
@@ -733,29 +973,37 @@ function navigateToSection(targetId) {
   const checkoutEl = document.getElementById('checkout');
 
   if (targetId === 'cart') {
-    if (cartEl) {
+    if (cartEl && !window.location.pathname.endsWith('cart.html')) {
       cartEl.style.display = 'block';
       renderCartPage();
       setTimeout(() => cartEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      history.pushState(null, null, '#cart');
+    } else {
+      window.location.href = 'cart.html';
     }
-    history.pushState(null, null, '#cart');
     return;
   }
 
   if (targetId === 'checkout') {
-    if (checkoutEl) {
+    if (checkoutEl && !window.location.pathname.endsWith('checkout.html')) {
       checkoutEl.style.display = 'block';
       renderCheckoutPage();
       setTimeout(() => checkoutEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      history.pushState(null, null, '#checkout');
+    } else {
+      window.location.href = 'checkout.html';
     }
-    history.pushState(null, null, '#checkout');
     return;
   }
 
   // Standard anchor scroll
-  const el = document.getElementById(targetId) || document.querySelector('.hero-section');
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  history.pushState(null, null, '#' + (targetId || 'home'));
+  const el = document.getElementById(targetId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.pushState(null, null, '#' + (targetId || 'home'));
+  } else {
+    window.location.href = 'index.html#' + targetId;
+  }
 }
 
 /* ============================================================
@@ -876,7 +1124,31 @@ function initMobileMenu() {
 }
 
 /* ============================================================
-   15. INITIALISE APP
+   16. BACK TO TOP BUTTON
+   ============================================================ */
+
+function initBackToTop() {
+  const btn = document.getElementById('backToTopBtn');
+  if (!btn) return;
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ============================================================
+   17. INITIALISE APP
    ============================================================ */
 
 function initApp() {
@@ -886,14 +1158,21 @@ function initApp() {
   initScrollAnimations();
   initFilterTabs();
   initMobileMenu();
+  initBackToTop();
+
+  // Automatic rendering if on dedicated cart or checkout pages
+  if (document.getElementById('cart-content')) {
+    renderCartPage();
+  }
+  if (document.getElementById('checkout-items-list')) {
+    renderCheckoutPage();
+  }
 
   // Cart state listener
   window.addEventListener('cart:updated', () => {
     updateCartBadge();
-    const cartEl     = document.getElementById('cart');
-    const checkoutEl = document.getElementById('checkout');
-    if (cartEl && cartEl.style.display === 'block')     renderCartPage();
-    if (checkoutEl && checkoutEl.style.display === 'block') renderCheckoutPage();
+    if (document.getElementById('cart-content')) renderCartPage();
+    if (document.getElementById('checkout-items-list')) renderCheckoutPage();
   });
 
   // Anchor-link interceptor (smooth + view routing)
@@ -955,6 +1234,49 @@ function initApp() {
       if (e.key === 'ArrowRight') lightboxNext();
     }
   });
+
+  // ── Hero Mouse Parallax Effect (Desktop) ──────────────────────────────────
+  const heroSec = document.querySelector('.hero-section');
+  if (heroSec && window.innerWidth > 768) {
+    let ticking = false;
+    heroSec.addEventListener('mousemove', e => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const rect = heroSec.getBoundingClientRect();
+          const cx = rect.width / 2;
+          const cy = rect.height / 2;
+          const dx = (e.clientX - rect.left - cx) / cx;
+          const dy = (e.clientY - rect.top - cy) / cy;
+
+          const blobs = heroSec.querySelectorAll('.ambient-blob');
+          const leaves = heroSec.querySelectorAll('.floating-leaf');
+          const pollen = heroSec.querySelectorAll('.pollen-particle');
+
+          blobs.forEach((el, idx) => {
+            const factor = (idx + 1) * 15;
+            el.style.transform = `translate3d(${dx * factor}px, ${dy * factor}px, 0)`;
+          });
+          leaves.forEach((el, idx) => {
+            const factor = (idx + 1) * -12;
+            el.style.transform = `translate3d(${dx * factor}px, ${dy * factor}px, 0)`;
+          });
+          pollen.forEach((el, idx) => {
+            const factor = (idx + 1) * 18;
+            el.style.transform = `translate3d(${dx * factor}px, ${dy * factor}px, 0)`;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    heroSec.addEventListener('mouseleave', () => {
+      const animatedEls = heroSec.querySelectorAll('.ambient-blob, .floating-leaf, .pollen-particle');
+      animatedEls.forEach(el => {
+        el.style.transform = '';
+      });
+    });
+  }
 }
 
 if (document.readyState === 'loading') {
