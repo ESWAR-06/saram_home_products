@@ -9,13 +9,13 @@ const PRODUCT_CATALOG = [
   // ── Eco Cleaning ──────────────────────────────────────────────────────────
   {
     id: 'prod-citrus-bio-enzyme',
-    filename: 'bio_enzyme_floor_cleaner.jpeg',
+    filename: 'citrus_bioenzyme.jpeg',
     title: 'Citrus Bio Enzyme',
     subtitle: '500 ml',
     category: 'cleaning',
     categoryLabel: 'Eco Cleaning',
     price: 80,
-    shortDesc: 'Naturally fermented multi-purpose cleaner & plant booster made from citrus peels, jaggery, and water.',
+    shortDesc: 'Naturally fermented citrus-based multi-purpose cleaner made from fruit peels. Eco-friendly, biodegradable and chemical-free with a fresh citrus fragrance.',
     detailedKey: 'Citrus Bio Enzyme'
   },
   {
@@ -33,7 +33,7 @@ const PRODUCT_CATALOG = [
     id: 'prod-floorwash',
     filename: 'bio_enzyme_floor_cleaner.jpeg',
     title: 'Floor Cleaner',
-    subtitle: '500 ml',
+    subtitle: 'Bio Enzyme Floor Cleaner',
     category: 'cleaning',
     categoryLabel: 'Eco Cleaning',
     price: 150,

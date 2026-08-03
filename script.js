@@ -15,9 +15,9 @@ const PRODUCT_DETAILS = {
 
   'Citrus Bio Enzyme': {
     price: 80,
-    tagline: 'Natural • Powerful • Safe Multi-Purpose Cleaner & Plant Booster',
+    tagline: 'Fresh Citrus Power for a Cleaner, Greener Home',
     netVolume: '500 ml',
-    description: 'A naturally fermented multi-purpose cleaner made from citrus peels, jaggery, and water. Safe, eco-friendly, and biodegradable, it is ideal for everyday household cleaning while helping reduce the use of harsh chemicals.',
+    description: 'A naturally fermented citrus-based multi-purpose cleaner made using fruit peels and natural ingredients. Suitable for everyday household cleaning — eco-friendly, biodegradable and chemical-free with a refreshing fresh citrus fragrance.',
     uses: [
       'Floor cleaning',
       'Bathroom and toilet cleaning',
@@ -27,8 +27,16 @@ const PRODUCT_DETAILS = {
       'General household cleaning',
       'Plant booster & soil fertility'
     ],
+    keyFeatures: [
+      'Made from naturally fermented citrus / fruit peels',
+      'Fresh citrus fragrance — naturally pleasant',
+      'Eco-friendly, biodegradable and chemical-free',
+      'Multi-purpose — cleans surfaces, floors, drains',
+      'Also works as a natural plant booster',
+      'Safe for the entire family'
+    ],
     benefits: [
-      '100% Naturally Fermented Formula',
+      '100% Naturally Fermented Citrus Formula',
       'Multi-Purpose Household Cleaner',
       'Eco-Friendly & Biodegradable',
       'Chemical-Free & Safe for Home',
@@ -50,6 +58,7 @@ const PRODUCT_DETAILS = {
       'Drain & Odour Control',
       'Garden Plants & Soil'
     ],
+    storage: 'Store in a cool, dry place away from direct sunlight. Keep the cap tightly closed after use. Use within 12 months of opening.',
     ingredients: [
       'Citrus / Lemon Peels',
       'Raw Jaggery',
@@ -58,9 +67,9 @@ const PRODUCT_DETAILS = {
     ],
     badges: [
       'Naturally Fermented',
+      'Citrus Fragrance',
       'Chemical Free',
-      'Eco Friendly',
-      'Multi-Purpose & Plant Booster'
+      'Eco Friendly'
     ]
   },
 
