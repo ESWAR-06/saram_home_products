@@ -87,7 +87,7 @@ const PRODUCT_DETAILS = {
   },
 
   'Floor Cleaner': {
-    price: 135,
+    price: 150,
     tagline: 'Naturally Clean Floors Every Day',
     description: 'SARAM Bio Enzyme Floor Cleaner naturally cleans and removes everyday dirt without harsh chemicals. Its plant-based formula is safe for children, pets, and the environment, while leaving your floors fresh and hygienically clean.',
     benefits: [
@@ -108,7 +108,7 @@ const PRODUCT_DETAILS = {
   },
 
   'Dish Wash': {
-    price: 149,
+    price: 170,
     tagline: 'Tough on Grease, Gentle on Hands',
     description: 'SARAM Bio Enzyme Dish Wash naturally removes tough grease and food residue from utensils. The gentle, plant-based formula is safe for hands and the environment, making it an ideal everyday dishwashing solution.',
     benefits: [
@@ -126,6 +126,38 @@ const PRODUCT_DETAILS = {
       'Suitable for everyday dishwashing.'
     ],
     suitableFor: ['Steel', 'Glass', 'Ceramic', 'Non-Stick', 'Other Washable Utensils', 'Plant-based', 'Eco-friendly']
+  },
+
+  'Laundry Wash': {
+    price: 225,
+    tagline: 'Clean Clothes, Clean Planet',
+    netVolume: '500 ml',
+    description: 'SARAM Natural Laundry Wash is formulated with eco-friendly, plant-based ingredients that effectively remove stains and odours while being completely gentle on fabrics. Suitable for all types of washing machines and hand wash, it keeps your clothes fresh and clean without exposing your family to harsh chemicals.',
+    benefits: [
+      'Effectively Removes Stains & Odours',
+      'Gentle on All Fabric Types',
+      'Plant-Based & Eco-Friendly Formula',
+      'Safe for Top Load & Front Load Machines',
+      'Suitable for Hand Wash Too',
+      'Biodegradable & Chemical-Free',
+      'Safe for Kids\' Clothes & Sensitive Skin'
+    ],
+    howToUse: [
+      'Use 50 ml for 5 kg of clothes in washing machines.',
+      'For heavily soiled clothes, use 70 ml for 5 kg of clothes.',
+      'Suitable for Top Load & Front Load Washing Machines.',
+      'Can also be used for Hand Wash — apply directly on fabric, lather, and rinse.',
+      'Shake well before use.',
+      'Store in a cool, dry place away from direct sunlight.',
+      'Keep out of reach of children.'
+    ],
+    suitableFor: ['Cotton', 'Linen', 'Synthetic Fabrics', 'Delicates', 'Kids\' Clothes', 'Top Load Machines', 'Front Load Machines', 'Hand Wash'],
+    badges: [
+      'Plant-Based Formula',
+      'Chemical Free',
+      'Eco Friendly',
+      'Machine & Hand Wash Safe'
+    ]
   },
 
   'Kumkumathi Roll-On': {
@@ -292,20 +324,20 @@ const PRODUCT_DETAILS = {
   },
 
   'Oval Bamboo Basket': {
-    price: 95,
+    price: 115,
     tagline: 'Charming Handcrafted Oval Serving & Storage Basket',
     size: '9 × 6.5 × 1 inch',
     material: 'Natural Bamboo',
-    description: 'Handcrafted from premium natural bamboo, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, fruit storage, snack serving, home organization, and festive décor.',
+    description: 'Handcrafted from premium natural bamboo, this elegant oval basket is lightweight, durable, reusable, and biodegradable. Its charming oval shape makes it ideal for return gifts, gift hampers, fruit storage, snack serving, home organization, and festive décor.',
     uses: [
       'Return gifts and gift hampers',
       'Fruit storage and snack serving',
       'Home organization',
-      'Festive décor'
+      'Festive and decorative displays'
     ],
     benefits: [
       'Premium Natural Bamboo Craftsmanship',
-      'Sleek Oval Design Ideal for Serving',
+      'Elegant Oval Design Ideal for Serving',
       'Lightweight, Durable & Reusable',
       'Biodegradable & Eco-Friendly'
     ],
@@ -313,11 +345,11 @@ const PRODUCT_DETAILS = {
   },
 
   'Round Bamboo Basket': {
-    price: 45,
+    price: 60,
     tagline: 'Versatile 7-inch Handcrafted Round Bamboo Basket',
     size: '7-inch Diameter',
     material: 'Natural Bamboo',
-    description: 'Handcrafted from premium natural bamboo, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, fruit storage, snack serving, home organization, and festive décor.',
+    description: 'Traditional handmade round bamboo basket crafted from natural bamboo for multipurpose household use. Lightweight, durable, reusable, and biodegradable — perfect for fruit storage, snack serving, return gifts, and everyday home organization.',
     uses: [
       'Return gifts and festive packaging',
       'Gift hampers and party favors',
@@ -328,18 +360,19 @@ const PRODUCT_DETAILS = {
       'Handcrafted 100% Natural Bamboo',
       'Compact 7-inch Round Shape',
       'Lightweight, Durable & Reusable',
-      'Wallet-Friendly Eco Alternative'
+      'Eco-Friendly & Biodegradable'
     ],
-    badges: ['100% Bamboo', 'Handmade', 'Eco Friendly', 'Affordable']
+    badges: ['100% Bamboo', 'Handmade', 'Eco Friendly', 'Multipurpose']
   },
 
-  'Bamboo Basket with Handle': {
+  'Large Bamboo Carry Basket': {
     price: 195,
     tagline: 'Spacious & Sturdy Handmade Bamboo Carry Basket',
     size: '16 × 11 × 5 inches',
     material: 'Natural Bamboo',
-    description: 'Beautifully handcrafted from premium natural bamboo, this spacious basket with a sturdy handle is eco-friendly, lightweight, durable, and reusable. Perfect for gift hampers, return gifts, fruit and vegetable storage, picnic essentials, festive gifting, home organization, and decorative displays. A sustainable alternative to plastic baskets.',
+    description: 'Beautifully handcrafted from premium natural bamboo, this spacious carry basket with sturdy handles is eco-friendly, lightweight, durable, and reusable. Perfect for shopping, gift hampers, return gifts, fruit and vegetable storage, picnic essentials, festive gifting, home organization, and decorative displays. A sustainable alternative to plastic baskets.',
     uses: [
+      'Shopping and daily market trips',
       'Gift hampers and return gifts',
       'Fruit and vegetable storage',
       'Picnic essentials and outings',
@@ -348,37 +381,74 @@ const PRODUCT_DETAILS = {
     ],
     benefits: [
       'Extra Large 16 × 11 × 5 inch Capacity',
-      'Strong Ergonomic Handle for Easy Transport',
+      'Strong Ergonomic Handles for Easy Transport',
       '100% Premium Natural Bamboo Construction',
       'Durable, Reusable & Sustainable Choice'
     ],
-    badges: ['Extra Large', 'Sturdy Handle', '100% Bamboo', 'Eco Friendly']
+    badges: ['Extra Large', 'Sturdy Handles', '100% Bamboo', 'Eco Friendly']
   },
 
-  'Square Bamboo Basket': {
-    price: 110,
-    tagline: 'Handcrafted Sandal Shade Square Bamboo Basket',
-    color: 'Sandal',
+  'Square Bamboo Basket (6 x 6)': {
+    price: 125,
+    tagline: 'Handcrafted Square Bamboo Basket — 6 × 6 inch',
+    size: '6 × 6 inches',
     material: 'Natural Bamboo',
-    description: 'Handcrafted from premium natural bamboo in an elegant sandal shade, this eco-friendly basket is lightweight, durable, reusable, and biodegradable. Ideal for return gifts, gift hampers, festive packaging, home organization, fruit storage, and decorative displays. A stylish and sustainable alternative to plastic baskets.',
-    availableSizes: [
-      '6 × 6 inch — ₹110',
-      '8 × 8 inch — ₹150',
-      '10 × 10 inch — ₹175'
-    ],
+    description: 'Beautiful handcrafted square bamboo basket made from premium natural bamboo. Lightweight, durable, reusable, and biodegradable. Suitable for gifting, storage, fruit display and home décor. An elegant sustainable alternative to plastic baskets.',
     uses: [
       'Return gifts and gift hampers',
       'Festive packaging and celebrations',
-      'Home organization and fruit storage',
+      'Fruit display and home organization',
       'Decorative displays'
     ],
     benefits: [
-      'Elegant Sandal Color Shade',
-      'Available in Multiple Versatile Sizes',
+      'Classic Square Design',
       'Handcrafted from Premium Natural Bamboo',
-      'Lightweight, Durable & Biodegradable'
+      'Lightweight, Durable & Biodegradable',
+      'Elegant & Sustainable'
     ],
-    badges: ['Sandal Color', 'Available in 3 Sizes', '100% Natural Bamboo', 'Handcrafted']
+    badges: ['6 × 6 inch', 'Handcrafted', '100% Natural Bamboo', 'Eco Friendly']
+  },
+
+  'Square Bamboo Basket (8 x 8)': {
+    price: 165,
+    tagline: 'Handcrafted Square Bamboo Basket — 8 × 8 inch',
+    size: '8 × 8 inches',
+    material: 'Natural Bamboo',
+    description: 'Beautiful handcrafted square bamboo basket made from premium natural bamboo. Lightweight, durable, reusable, and biodegradable. Suitable for gifting, storage, fruit display and home décor. An elegant sustainable alternative to plastic baskets.',
+    uses: [
+      'Return gifts and gift hampers',
+      'Festive packaging and celebrations',
+      'Fruit display and home organization',
+      'Decorative displays'
+    ],
+    benefits: [
+      'Medium Square Design for Versatile Use',
+      'Handcrafted from Premium Natural Bamboo',
+      'Lightweight, Durable & Biodegradable',
+      'Elegant & Sustainable'
+    ],
+    badges: ['8 × 8 inch', 'Handcrafted', '100% Natural Bamboo', 'Eco Friendly']
+  },
+
+  'Square Bamboo Basket (10 x 10)': {
+    price: 185,
+    tagline: 'Handcrafted Square Bamboo Basket — 10 × 10 inch',
+    size: '10 × 10 inches',
+    material: 'Natural Bamboo',
+    description: 'Beautiful handcrafted square bamboo basket made from premium natural bamboo. Lightweight, durable, reusable, and biodegradable. Suitable for gifting, storage, fruit display and home décor. An elegant sustainable alternative to plastic baskets.',
+    uses: [
+      'Return gifts and gift hampers',
+      'Festive packaging and celebrations',
+      'Fruit display and home organization',
+      'Decorative displays'
+    ],
+    benefits: [
+      'Large Square Design for Generous Gifting',
+      'Handcrafted from Premium Natural Bamboo',
+      'Lightweight, Durable & Biodegradable',
+      'Elegant & Sustainable'
+    ],
+    badges: ['10 × 10 inch', 'Handcrafted', '100% Natural Bamboo', 'Eco Friendly']
   },
 
   'Bamboo Tray': {

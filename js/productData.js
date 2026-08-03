@@ -36,7 +36,7 @@ const PRODUCT_CATALOG = [
     subtitle: '500 ml',
     category: 'cleaning',
     categoryLabel: 'Eco Cleaning',
-    price: 135,
+    price: 150,
     shortDesc: 'Naturally cleans and removes everyday dirt. Safe for kids, pets, and the environment.',
     detailedKey: 'Floor Cleaner'
   },
@@ -47,9 +47,20 @@ const PRODUCT_CATALOG = [
     subtitle: '500 ml',
     category: 'cleaning',
     categoryLabel: 'Eco Cleaning',
-    price: 149,
+    price: 170,
     shortDesc: 'Naturally removes tough grease. Gentle on hands and safe for the environment.',
     detailedKey: 'Dish Wash'
+  },
+  {
+    id: 'prod-laundrywash',
+    filename: 'laundry_wash.jpeg',
+    title: 'Laundry Wash',
+    subtitle: '500 ml',
+    category: 'cleaning',
+    categoryLabel: 'Eco Cleaning',
+    price: 225,
+    shortDesc: 'Natural Laundry Wash made with eco-friendly ingredients that cleans clothes effectively while being gentle on fabrics and the environment.',
+    detailedKey: 'Laundry Wash'
   },
 
   // ── Skincare / Wellness ───────────────────────────────────────────────────
@@ -117,7 +128,7 @@ const PRODUCT_CATALOG = [
     subtitle: 'Handwoven Carry Basket',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 100,
+    price: 135,
     shortDesc: 'Premium traditional hand-woven carry basket with sturdy handles, durable and eco-friendly.',
     detailedKey: null
   },
@@ -139,7 +150,7 @@ const PRODUCT_CATALOG = [
     subtitle: 'Handwoven Palm',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 15,
+    price: 20,
     shortDesc: 'Sleek traditional hand-woven palm basket, ideal for fruit storage or natural home decor.',
     detailedKey: null
   },
@@ -150,7 +161,7 @@ const PRODUCT_CATALOG = [
     subtitle: 'Handwoven Palm',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 30,
+    price: 35,
     shortDesc: 'Large handmade organizer basket, crafted from premium dried palm leaves.',
     detailedKey: null
   },
@@ -161,7 +172,7 @@ const PRODUCT_CATALOG = [
     subtitle: 'Palm Leaf',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 20,
+    price: 25,
     shortDesc: 'Handcrafted palm leaf storage basket, perfect for organizing household items sustainably.',
     detailedKey: null
   },
@@ -183,8 +194,8 @@ const PRODUCT_CATALOG = [
     subtitle: '9 × 6.5 × 1 inch',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 95,
-    shortDesc: 'Handcrafted oval bamboo tray basket, ideal for snack serving, fruits, hampers & festive decor.',
+    price: 115,
+    shortDesc: 'Elegant handcrafted oval bamboo basket suitable for serving, gifting, storage and home décor.',
     detailedKey: 'Oval Bamboo Basket'
   },
   {
@@ -194,8 +205,8 @@ const PRODUCT_CATALOG = [
     subtitle: '7-inch Diameter',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 45,
-    shortDesc: 'Handcrafted 7" round bamboo basket, lightweight & durable for fruit storage, snacks & return gifts.',
+    price: 60,
+    shortDesc: 'Traditional handmade round bamboo basket crafted from natural bamboo for multipurpose household use.',
     detailedKey: 'Round Bamboo Basket'
   },
   {
@@ -206,19 +217,41 @@ const PRODUCT_CATALOG = [
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
     price: 195,
-    shortDesc: 'Spacious 16×11×5" handcrafted bamboo carry basket with sturdy handle for hampers & storage.',
-    detailedKey: 'Bamboo Basket with Handle'
+    shortDesc: 'Premium handcrafted large bamboo carry basket with strong handles, perfect for shopping, gifting and storage.',
+    detailedKey: 'Large Bamboo Carry Basket'
   },
   {
-    id: 'prod-square-bamboo-basket',
+    id: 'prod-square-bamboo-6x6',
     filename: 'square_bamboo_basket.jpeg',
-    title: 'Square Bamboo Basket (Sandal)',
-    subtitle: '6" | 8" | 10" Available',
+    title: 'Square Bamboo Basket (6 x 6)',
+    subtitle: '6 × 6 inches',
     category: 'handmade',
     categoryLabel: 'Traditional Handmade',
-    price: 110,
-    shortDesc: 'Handcrafted sandal shade square bamboo basket available in 6×6", 8×8", and 10×10" sizes.',
-    detailedKey: 'Square Bamboo Basket'
+    price: 125,
+    shortDesc: 'Beautiful handcrafted square bamboo baskets suitable for gifting, storage, fruit display and home décor.',
+    detailedKey: 'Square Bamboo Basket (6 x 6)'
+  },
+  {
+    id: 'prod-square-bamboo-8x8',
+    filename: 'square_bamboo_basket.jpeg',
+    title: 'Square Bamboo Basket (8 x 8)',
+    subtitle: '8 × 8 inches',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 165,
+    shortDesc: 'Beautiful handcrafted square bamboo baskets suitable for gifting, storage, fruit display and home décor.',
+    detailedKey: 'Square Bamboo Basket (8 x 8)'
+  },
+  {
+    id: 'prod-square-bamboo-10x10',
+    filename: 'square_bamboo_basket.jpeg',
+    title: 'Square Bamboo Basket (10 x 10)',
+    subtitle: '10 × 10 inches',
+    category: 'handmade',
+    categoryLabel: 'Traditional Handmade',
+    price: 185,
+    shortDesc: 'Beautiful handcrafted square bamboo baskets suitable for gifting, storage, fruit display and home décor.',
+    detailedKey: 'Square Bamboo Basket (10 x 10)'
   },
   {
     id: 'prod-bamboo-tray',
