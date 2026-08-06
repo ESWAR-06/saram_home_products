@@ -7,6 +7,20 @@
 /* Fonts Import — Cormorant Garamond for editorial luxury headings */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* ===== PREMIUM DESIGN SYSTEM VARIABLES ===== */
 :root {
   /* === DEEP FOREST PREMIUM PALETTE === */
@@ -5446,3 +5460,112 @@ h1, h2 {
 }
 
 
+/* ==========================================================================
+   GOOGLE REVIEW CTA CARD — scoped to .grcta-* only
+   ========================================================================== */
+
+.grcta-outer {
+  padding: 0 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.grcta-outer.grcta-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grcta-card {
+  max-width: 650px;
+  width: 100%;
+  margin: 60px auto;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.grcta-stars {
+  font-size: 1.4rem;
+  color: #C4924A;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.grcta-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.grcta-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4d5c55;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.grcta-btn {
+  display: inline-block;
+  padding: 16px 30px;
+  background: linear-gradient(135deg, #1B4A2E, #27734A);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(39, 115, 74, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.grcta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(39, 115, 74, 0.38);
+  color: #fff;
+}
+
+.grcta-btn:active {
+  transform: translateY(-1px);
+  transition-duration: 0.1s;
+}
+
+.grcta-micro {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #4d5c55;
+  opacity: 0.7;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 600px) {
+  .grcta-card {
+    padding: 24px 18px;
+    margin: 40px auto;
+  }
+
+  .grcta-heading {
+    font-size: 24px;
+  }
+
+  .grcta-btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 0.97rem;
+  }
+}

@@ -1126,6 +1126,20 @@ function initNavScroll() {
       link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
     });
   }, { passive: true });
+
+  // Fade-up reveal for the Google Review CTA card
+  const grctaEl = document.querySelector('.grcta-outer');
+  if (grctaEl) {
+    const grctaObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('grcta-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    grctaObserver.observe(grctaEl);
+  }
 }
 
 /* ============================================================
