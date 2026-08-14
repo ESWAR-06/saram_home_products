@@ -1750,8 +1750,8 @@ img {
   background-color: var(--color-primary);
   color: rgba(255,255,255,0.7);
   padding-top: 80px;
-  border-top: 2px solid rgba(255,255,255,0.05);
 }
+
 
 .footer-grid {
   display: grid;
@@ -5120,18 +5120,7 @@ h1, h2 {
   overflow: hidden;
 }
 
-/* Top glow line */
-.main-footer::before {
-  content: '';
-  display: block;
-  height: 2px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(39, 115, 74, 0.5) 20%,
-    var(--color-gold) 50%,
-    rgba(39, 115, 74, 0.5) 80%,
-    transparent 100%);
-}
+
 
 /* ==========================================================================
    NAV LINK — ACTIVE STATE GRADIENT
