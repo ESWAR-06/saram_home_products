@@ -531,12 +531,17 @@ img {
 
 .mobile-nav {
   text-align: center;
+  width: 100%;
 }
 
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .mobile-link {
@@ -549,6 +554,39 @@ img {
 .mobile-link:hover {
   color: var(--color-accent);
 }
+
+/* Mobile Nav Cart Link Centering & Alignment */
+.mobile-cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.icon-cart-sm {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.mobile-cart-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-emerald);
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  line-height: 1;
+  margin-left: 2px;
+}
+
 
 /* === HERO SECTION — IMMERSIVE PREMIUM ENVIRONMENT === */
 .hero-section {
