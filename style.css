@@ -1750,7 +1750,23 @@ img {
   background-color: var(--color-primary);
   color: rgba(255,255,255,0.7);
   padding-top: 80px;
+  border: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
 }
+
+.main-footer::before,
+.main-footer::after,
+.footer-grid::before,
+.footer-grid::after,
+.footer-logo-row::before,
+.footer-logo-row::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  height: 0 !important;
+}
+
 
 
 .footer-grid {
