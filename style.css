@@ -3173,15 +3173,12 @@ img {
     gap: 10px;
   }
 
-  .modal-actions .btn {
+  .modal-actions .btn,
+  .modal-actions .modal-add-cart-btn,
+  .modal-actions .modal-close-btn {
+    display: flex;
     width: 100%;
     height: 46px;
-    box-sizing: border-box;
-  }
-
-  .modal-add-cart-btn,
-  .modal-close-btn {
-    width: 100% !important;
     box-sizing: border-box;
   }
 
