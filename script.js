@@ -558,9 +558,16 @@ function lightboxPrev() {
 
 function openDetailsModal(productId) {
   const product = getProductById(productId);
-  if (!product || !product.detailedKey) return;
-  const details = PRODUCT_DETAILS[product.detailedKey];
-  if (!details) return;
+  if (!product) return;
+
+  const hasStaticDetails = product.detailedKey && PRODUCT_DETAILS[product.detailedKey];
+  const hasDbDesc = product.shortDesc && product.shortDesc.trim() !== '';
+  if (!hasStaticDetails && !hasDbDesc) return;
+
+  const details = hasStaticDetails ? { ...PRODUCT_DETAILS[product.detailedKey] } : {};
+  if (hasDbDesc) {
+    details.description = product.shortDesc;
+  }
 
   const modal = document.getElementById('productModal');
   const body  = modal.querySelector('.modal-body');
@@ -698,7 +705,7 @@ function openDetailsModal(productId) {
           ${volumeHTML}
         </div>
         ${badgesHTML}
-        <p class="modal-description">${details.description}</p>
+        ${details.description ? `<p class="modal-description">${details.description}</p>` : ''}
         ${specsHTML}
         ${sizesHTML}
         ${usesHTML}
@@ -748,7 +755,9 @@ function renderProducts() {
   };
 
   PRODUCT_CATALOG.forEach(product => {
-    const hasDetails = product.detailedKey && PRODUCT_DETAILS[product.detailedKey];
+    const hasStaticDetails = product.detailedKey && PRODUCT_DETAILS[product.detailedKey];
+    const hasDbDesc = product.shortDesc && product.shortDesc.trim() !== '';
+    const hasDetails = hasStaticDetails || hasDbDesc;
     const badge = ecoBadgeMap[product.category];
 
     const card = document.createElement('div');
