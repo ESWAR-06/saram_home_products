@@ -1,0 +1,341 @@
+/* admin.css - Admin Dashboard Specific Styles */
+/* Most styling inherits from style.css, these are overrides and specific admin layouts */
+
+/* Login View */
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  background-image: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-sage) 100%);
+}
+
+.login-box {
+  background: var(--color-card);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.login-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.btn-full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Dashboard Header */
+.dashboard-wrapper {
+  padding-top: 80px; /* offset for fixed navbar */
+  min-height: calc(100vh - 80px);
+  background-color: var(--color-bg-warm);
+}
+
+.dashboard-header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 20px;
+}
+
+.dashboard-title-area .section-title {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.dashboard-title-area .section-subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+/* Form Styles */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background-color: #fff;
+  font-family: var(--font-body);
+  transition: var(--transition-fast);
+  color: var(--color-text);
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--color-emerald);
+  box-shadow: 0 0 0 3px rgba(39, 115, 74, 0.1);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  font-size: 12px;
+  color: var(--color-text-muted);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select-wrapper select {
+  appearance: none;
+  padding-right: 35px;
+}
+
+.file-upload-wrapper input[type="file"] {
+  padding: 10px;
+  background: var(--color-bg-sage);
+  border: 1px dashed var(--color-emerald-light);
+  cursor: pointer;
+}
+
+.hint-text {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-secondary-light);
+}
+
+/* Admin Modals */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 45, 30, 0.6);
+  backdrop-filter: var(--glass-blur);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.admin-modal {
+  background: var(--color-card);
+  width: 90%;
+  max-width: 650px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+  position: relative;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .admin-modal {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 24px 30px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.modal-body {
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: var(--color-bg-sage);
+  color: var(--color-primary);
+}
+
+.admin-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.admin-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Admin Specific Product Card Styles */
+.admin-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 15px 20px;
+  background-color: var(--color-bg-warm);
+  border-top: 1px solid var(--color-border);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.btn-edit-action {
+  background-color: #f0f7f4;
+  color: var(--color-emerald);
+  border-color: rgba(39, 115, 74, 0.2);
+}
+.btn-edit-action:hover {
+  background-color: var(--color-emerald);
+  color: white;
+}
+
+.btn-delete-action {
+  background-color: #fff0f0;
+  color: #d32f2f;
+  border-color: rgba(211, 47, 47, 0.2);
+}
+.btn-delete-action:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* Status Pill Override for Admin */
+.admin-status-pill {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: var(--shadow-xs);
+}
+
+.status-true {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.status-false {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+/* Responsive Grid for Admin Dashboard Products */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+/* System Messages */
+.message { margin-top: 20px; font-size: 14px; padding: 12px 16px; border-radius: var(--radius-xs); display: none; font-weight: 500; }
+.message.error { display: block; color: #c62828; background-color: #ffcdd2; border: 1px solid #e53935; }
+.message.success { display: block; color: #2e7d32; background-color: #c8e6c9; border: 1px solid #43a047; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-header-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Keep 2 columns if space allows */
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SARAM HOME PRODUCTS - Admin Dashboard</title>
+  
+  <!-- Use main stylesheet for brand consistency -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Admin specific overrides -->
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Admin Navbar -->
+  <header class="main-header" id="adminHeader" style="display: none;">
+    <div class="container header-container">
+      <a href="#" class="logo-area" aria-label="SARAM HOME PRODUCTS Admin">
+        <img src="images/logo.png" alt="SARAM HOME PRODUCTS Logo" class="nav-logo">
+        <span class="brand-name">
+          <span>SARAM HOME</span>
+          <span>ADMIN DASHBOARD</span>
+        </span>
+      </a>
+
+      <!-- Right Side CTA -->
+      <div class="nav-right" style="gap: 15px;">
+        <button id="logoutBtn" class="btn btn-outline" style="padding: 8px 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Logout
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Container -->
+  <div class="login-wrapper" id="loginContainer">
+    <div class="login-box">
+      <div class="login-logo">
+        <img src="images/logo.png" alt="SARAM HOME PRODUCTS Logo">
+      </div>
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="loginBtn">Secure Login</button>
+      </form>
+      <div id="loginMessage" class="message"></div>
+    </div>
+  </div>
+
+  <!-- Dashboard Container -->
+  <main class="dashboard-wrapper" id="dashboardContainer" style="display: none;">
+    <section class="section">
+      <div class="container">
+        
+        <div class="dashboard-header-block">
+          <div class="dashboard-title-area">
+            <h1 class="section-title">Manage Products</h1>
+            <p class="section-subtitle">Manage your products, inventory and product information.</p>
+          </div>
+          <button id="addBtn" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            Add Product
+          </button>
+        </div>
+        
+        <div id="dashboardMessage" class="message"></div>
+
+        <div id="adminProductGrid" class="product-grid">
+          <!-- Products will be injected here as cards -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Modal (Add/Edit) -->
+  <div id="productModal" class="modal-overlay">
+    <div class="modal-content admin-modal">
+      <button type="button" class="modal-close-btn" id="modalClose" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      
+      <div class="modal-header">
+        <h2 id="modalTitle" class="section-title" style="margin: 0; font-size: 24px;">Add Product</h2>
+      </div>
+      
+      <div class="modal-body">
+        <form id="productForm" class="admin-form">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="prodId">Product ID (e.g. citrus_bioenzyme)</label>
+              <input type="text" id="prodId" required>
+            </div>
+            <div class="input-group">
+              <label for="prodName">Product Name</label>
+              <input type="text" id="prodName" required>
+            </div>
+            
+            <div class="input-group">
+              <label for="prodPrice">Price (₹)</label>
+              <input type="number" id="prodPrice" required>
+            </div>
+            <div class="input-group">
+              <label for="prodSize">Size (e.g. 500ml)</label>
+              <input type="text" id="prodSize" required>
+            </div>
+            
+            <div class="input-group">
+              <label for="prodCategory">Category</label>
+              <div class="select-wrapper">
+                <select id="prodCategory" required>
+                  <option value="cleaning">Eco Cleaning</option>
+                  <option value="skincare">Natural Skincare</option>
+                  <option value="handmade">Traditional Handmade</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Status</label>
+              <div class="select-wrapper">
+                <select id="prodAvailable" required>
+                  <option value="true">Available</option>
+                  <option value="false">Unavailable</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="input-group full-width">
+            <label for="prodDesc">Description</label>
+            <textarea id="prodDesc" rows="3" required></textarea>
+          </div>
+          
+          <div class="input-group full-width">
+            <label for="prodImage">Product Image</label>
+            <div class="file-upload-wrapper">
+              <input type="file" id="prodImage" accept="image/*">
+              <small id="prodImageHint" class="hint-text" style="display:none;">Leave blank to keep existing image</small>
+            </div>
+          </div>
+          
+          <div class="form-actions" style="gap: 10px; display: flex;">
+            <button type="button" class="btn btn-outline" id="cancelBtn" onclick="closeModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveBtn">Save Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Load Public Catalog Core -->
+  <script src="js/productData.js"></script>
+  <!-- Load Admin Logic -->
+  <script src="admin.js"></script>
+</body>
+</html>
