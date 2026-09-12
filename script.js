@@ -489,13 +489,10 @@ const PRODUCT_DETAILS = {
    2. PRODUCT IMAGE LIGHTBOX (from product cards)
    ============================================================ */
 
-let lightboxImages = PRODUCT_CATALOG.map(p => ({
-  src: 'images/' + p.filename,
-  title: p.title,
-  subtitle: p.subtitle || ''
-}));
+let lightboxImages = [];
 
 let currentLightboxIndex = 0;
+
 
 function openProductLightbox(productId) {
   const idx = PRODUCT_CATALOG.findIndex(p => p.id === productId);
@@ -690,7 +687,7 @@ function openDetailsModal(productId) {
   body.innerHTML = `
     <div class="modal-grid">
       <div class="modal-img-wrapper">
-        <img src="images/${product.filename}" alt="${product.title}" loading="lazy" onerror="this.onerror=null; this.src='images/bio_enzyme_floor_cleaner.jpeg';">
+        <img src="${product.filename}" alt="${product.title}" loading="lazy" onerror="this.onerror=null; this.src='images/bio_enzyme_floor_cleaner.jpeg';">
       </div>
       <div class="modal-content-area">
         <span class="product-category">${product.categoryLabel}</span>
@@ -769,11 +766,11 @@ function renderProducts() {
         <div class="product-img-zoom-hint">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
         </div>
-        <img src="images/${product.filename}" 
+        <img src="${product.filename}"
              alt="${product.title}" 
              class="product-img" 
              loading="lazy"
-             onerror="this.onerror=null; this.src='images/bio_enzyme_floor_cleaner.jpeg';">
+             onerror="this.onerror=null;">
       </div>
       <div class="product-info">
         <span class="product-category">${product.categoryLabel}</span>
@@ -872,7 +869,7 @@ function renderCartPage() {
 
   const itemsHTML = items.map(item => `
     <div class="cart-item-card" data-id="${item.productId}">
-      <img src="images/${item.product.filename}" alt="${item.product.title}" class="cart-item-thumb">
+      <img src="${item.product.filename}" alt="${item.product.title}" class="cart-item-thumb" onerror="this.onerror=null;">
       <div class="cart-item-info">
         <h4 class="cart-item-title">${item.product.title}</h4>
         ${item.product.subtitle ? `<span class="cart-item-subtitle">${item.product.subtitle}</span>` : ''}
@@ -1244,7 +1241,16 @@ function initBackToTop() {
    17. INITIALISE APP
    ============================================================ */
 
-function initApp() {
+async function initApp() {
+
+  await catalogReady;
+
+  lightboxImages = PRODUCT_CATALOG.map(p => ({
+  src: p.filename,
+  title: p.title,
+  subtitle: p.subtitle || ''
+}));
+  renderProducts();
   renderProducts();
   updateCartBadge();
   initNavScroll();
