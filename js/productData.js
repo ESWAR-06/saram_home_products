@@ -8,9 +8,25 @@ const SUPABASE_URL = 'https://jadlkikzkpkceeqvcgia.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY =
   'sb_publishable_ipcjX2LryepNnZA2y62nKQ_pxEVGxBJ';
 
+// Authenticated client — used by admin.js for login, CRUD, storage.
+// Persists the admin session in localStorage (default behavior).
 const supabaseClient = supabase.createClient(
   SUPABASE_URL,
   SUPABASE_PUBLISHABLE_KEY
+);
+
+// Public (anonymous) client — used ONLY for public product reads.
+// persistSession:false ensures it never picks up or sends an expired
+// admin JWT, so public SELECT always works with the anon key alone.
+const publicSupabaseClient = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY,
+  {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false
+    }
+  }
 );
 
 
@@ -38,7 +54,7 @@ const CATEGORY_LABELS = {
 
 async function loadProducts() {
 
-  const { data, error } = await supabaseClient
+  const { data, error } = await publicSupabaseClient
     .from('PRODUCTS')
     .select('*')
     .order('NAME');
@@ -93,4 +109,4 @@ function getProductById(productId) {
 // READY PROMISE
 // ============================================================
 
-const catalogReady = loadProducts();
+const catalogReady = loadProducts();
