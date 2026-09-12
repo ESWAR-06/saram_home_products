@@ -1046,7 +1046,7 @@ Thank you.`;
   if (notice) notice.style.display = 'flex';
 
   const waUrl = `https://wa.me/918608495618?text=${encodeURIComponent(message)}`;
-  setTimeout(() => window.open(waUrl, '_blank'), 350);
+  window.location.href = waUrl;
 }
 
 /* ============================================================
